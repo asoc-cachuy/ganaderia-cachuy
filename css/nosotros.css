@@ -1,0 +1,441 @@
+:root {
+  --bg-color: #ffffff;
+  --bg-color-dark: #43283a;
+  --button-color-dark: #2c1825af;
+  --text-color: #000000;
+  --text-parrafos: rgb(39, 39, 39);
+  --border-bottom: #928f8f98;
+}
+/*! imagen y su texto*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.inicio-contacto-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+.seccion-contacto {
+  background-image: url('../images/nosotrospx4.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: left;
+}
+.texto-contacto {
+  margin-top: 20vh;
+}
+.texto-contacto h1 {
+  font-size: clamp(2rem, 8vw, 10rem);
+  margin: 0 0 0 5rem;
+  color: white;
+  font-family:'Cherry Bomb One', cursive;
+}
+.titulo-contacto span {
+  display: inline-block;
+  animation: pulseBounceGlow 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+.texto-contacto p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 0 0 0 5rem;
+  color: white;
+}
+@keyframes pulseBounceGlow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+  30% {
+    transform: scale(1.3) translateY(-7px); /* Pulso + Rebote leve */
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.1) translateY(2px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+}
+.titulo-contacto span:nth-child(1) { animation-delay: 0s; }
+.titulo-contacto span:nth-child(2) { animation-delay: 0.2s; }
+.titulo-contacto span:nth-child(3) { animation-delay: 0.4s; }
+.titulo-contacto span:nth-child(4) { animation-delay: 0.6s; }
+.titulo-contacto span:nth-child(5) { animation-delay: 0.8s; }
+.titulo-contacto span:nth-child(6) { animation-delay: 1s; }
+.titulo-contacto span:nth-child(7) { animation-delay: 1.2s; }
+.titulo-contacto span:nth-child(8) { animation-delay: 1.4s; }
+
+
+/*! sobre nosotros */
+
+.sobre-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    color: var(--text-color);
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+.sobre-nosotros div h2{
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin: 0;
+    border-left: rgb(0, 225, 255) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+}
+.sobre-nosotros div p{
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--text-parrafos);
+}
+/*! carrusel*/
+.carrusel {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.carrusel-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carrusel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.carrusel-item.active {
+  display: block;
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.carrusel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrusel-prev, .carrusel-next {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carrusel-prev svg, .carrusel-next svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+.carrusel-prev:hover svg, .carrusel-next:hover svg {
+  fill: #555;
+}
+/*! mision */
+.misiones{
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.misiones h2{
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin: 0;
+    border-left: rgb(0, 225, 255) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+}
+.misiones .pe{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: var(--text-parrafos);
+    text-align: center;
+}
+.mision{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+}
+.mision-texto h3 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: #00BFFF 3px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+.mision-texto .pmivi{
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #00BFFF;
+  color: rgb(0, 0, 0);
+}
+
+.valores{
+    padding-left:1rem;
+}
+.valores .valores-text{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+    font-family: 'Lobster', cursive;
+    border: #00BFFF 3px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+.valores .p{
+    margin: 1rem 0;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-parrafos);
+}
+.valores-lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    background-color: #00BFFF;
+    padding: 1rem;
+    border-radius: 15px;
+}
+.responsabilidad{
+    font-size: 1.3rem;
+    font-family: cursive;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+}
+.valores-lista div p{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem;
+    border: rgb(255, 255, 255) 2px solid;
+    border-radius: 10px;
+}
+
+/*! modelo de Negocio */
+
+.container-modelo-negocio{
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.modelo-negocio{
+    color: var(--text-color);
+}
+.modelo-negocio h2{
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin: 0;
+    border-left: rgb(0, 225, 255) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+}
+
+.modelo-negocio .mdn{
+     text-align: center;
+     padding: 1rem;
+}
+
+.produccion{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+}
+.produccion div h3{
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: #00BFFF 3px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.produccion div p{
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    border: #00BFFF 3px solid ;
+    color: var(--text-parrafos);
+}
+.estadisticas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+    text-align: center;
+    
+}
+.estadisticas div {
+    background-color:#00BFFF;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: clamp(1rem, 2vw, 1rem);
+}
+.estadisticas div h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+.estadisticas div p{
+    color: rgb(95, 91, 91);
+}
+/*! impulsamos la ganaderia */
+.impulsamos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    color: var(--text-color);
+}
+.container-impulsamos{
+    color: var(--text-color);
+        margin: 7rem 0;
+}
+
+.container-impulsamos h2{
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin: 0;
+    border-left: rgb(0, 225, 255) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+}
+.impulsamos-texto p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-parrafos);
+    padding: 1rem;
+    text-align: center;
+}
+.impulsamos h3{
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: #00BFFF 3px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+.impulsamos p{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--text-parrafos);
+    padding: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .sobre-nosotros,
+  .mision {
+    grid-template-columns: 1fr;
+  }
+
+  .valores-lista {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .produccion {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .estadisticas {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .impulsamos {
+    grid-template-columns: 1fr;
+  }
+
+  .carrusel {
+    width: 90%;
+    height: auto;
+  }
+
+  .carrusel-item img {
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .texto-contacto h1,
+  .texto-contacto p {
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  .valores-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .produccion {
+    grid-template-columns: 1fr;
+  }
+
+  .estadisticas {
+    grid-template-columns: 1fr;
+  }
+
+  .container-impulsamos,
+  .container-modelo-negocio,
+  .misiones,
+  .sobre-nosotros {
+    padding: 0 1rem;
+  }
+
+  .carrusel-controls {
+    padding: 0 1rem;
+  }
+}

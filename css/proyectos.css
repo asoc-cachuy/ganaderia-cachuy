@@ -1,0 +1,465 @@
+:root {
+  --bg-color: #ffffff;
+  --bg-color-dark: #43283a;
+  --button-color-dark: #2c1825af;
+  --text-color: #000000;
+  --text-parrafos: rgb(39, 39, 39);
+  --border-bottom: #928f8f98;
+}
+/*! imagen y su texto*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.inicio-contacto-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+.seccion-contacto {
+  background-image: url('../images/proyectospx4.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: left;
+}
+.texto-contacto {
+  margin-top: 20vh;
+}
+.texto-contacto h1 {
+  font-size: clamp(2rem, 8vw, 10rem);
+  margin: 0 0 0 5rem;
+  color: white;
+  font-family:'Cherry Bomb One', cursive;
+}
+
+.titulo-contacto span {
+  display: inline-block;
+  animation: pulseBounceGlow 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+.texto-contacto p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 0 0 0 5rem;
+  color: white;
+}
+@keyframes pulseBounceGlow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+  30% {
+    transform: scale(1.3) translateY(-7px); /* Pulso + Rebote leve */
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.1) translateY(2px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+}
+.titulo-contacto span:nth-child(1) { animation-delay: 0s; }
+.titulo-contacto span:nth-child(2) { animation-delay: 0.2s; }
+.titulo-contacto span:nth-child(3) { animation-delay: 0.4s; }
+.titulo-contacto span:nth-child(4) { animation-delay: 0.6s; }
+.titulo-contacto span:nth-child(5) { animation-delay: 0.8s; }
+.titulo-contacto span:nth-child(6) { animation-delay: 1s; }
+.titulo-contacto span:nth-child(7) { animation-delay: 1.2s; }
+.titulo-contacto span:nth-child(8) { animation-delay: 1.4s; }
+.titulo-contacto span:nth-child(9) { animation-delay: 1.6s; }
+
+/*! container de proyectos */
+
+.seccion-main-proyectos{
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.seccion-main-proyectos h2{
+   font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin: 0;
+    border-left: rgb(216, 13, 243) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+}
+.seccion-main-proyectos p {
+      font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--text-parrafos);
+}
+/*! proyecto en ejecucion */
+.proyectos-ejecucion {
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.items-proyecto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.proyectos-ejecucion h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  padding: 0.5rem;
+  margin: 0;
+  border-left: rgb(216, 13, 243) 8px solid;
+  color: rgb(17, 17, 17);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding-left: 1rem;
+  font-family: 'Underdog', cursive;
+}
+.proyectos-ejecucion p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--text-parrafos);
+  text-align: center;
+}
+
+.item {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem 0;
+}
+.progress-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative; /* ✅ clave para centrar el texto */
+}
+
+.progress-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.progressbar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  pointer-events: none;
+}
+
+/*contenido de ejecucion*/
+
+.conte-eje h3{
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: rgb(162, 0, 255) 3px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+.conte-eje p{
+  margin: 0.5rem 0.5rem;
+  text-align: center;
+}
+.contenido-eje{
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: rgb(162, 0, 255);
+  color: rgb(235, 232, 232);
+}
+.contenido-eje h4 {
+  font-size: 1.3rem;
+    font-family: cursive;
+    font-weight: 900;
+    color: white;
+    padding-bottom: 1rem;
+}
+.contenido-eje ul {
+  padding-left: 2rem;
+}
+
+/*! Proyectos Finalizados */
+.proyectos-finalizados{
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.items-proyecto-finaizado{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: 1rem;
+}
+.proyectos-finalizados h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-left: rgb(216, 13, 243) 8px solid;
+  color: rgb(17, 17, 17);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding-left: 1rem;
+  font-family: 'Underdog', cursive;
+}
+.proyectos-finalizados p {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--text-parrafos);
+  text-align: center;
+}
+.contenedor-proyectos-fin .container-image {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
+.contenedor-proyectos-fin img {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/*contenido*/
+
+.contenedor-proyectos-fin h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: rgb(162, 0, 255) 3px solid;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+/*! proyectos en planificacion */
+.proyectos-planificacion{
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.items-proyectos-planificacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.proyectos-planificacion h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-left: rgb(216, 13, 243) 8px solid;
+  border-top-left-radius: 15px;
+  color: rgb(17, 17, 17);
+  border-bottom-left-radius: 15px;
+  padding-left: 1rem;
+  font-family: 'Underdog', cursive;
+}
+.proyectos-planificacion p {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--text-parrafos);
+  text-align: center;
+}
+.items-proyectos-planificacion h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: rgb(162, 0, 255) 3px solid;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+/*! Galeria de proyectos */
+.galeria-proyectos {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.galeria-proyectos h2{
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-left: rgb(216, 13, 243) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+    font-weight: 900;
+}
+.carrusel-contenedor {
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .miniaturas {
+      display: flex;
+      animation: scroll-carrusel 30s linear infinite;
+      width: max-content;
+    }
+
+    .miniaturas img {
+      width: 100px;
+      height: 70px;
+      margin: 0 8px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      opacity: 0.7;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .miniaturas img:hover {
+      transform: scale(1.1);
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    @keyframes scroll-carrusel {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .imagen-principal {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 20px;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .imagen-principal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .contenido-encima {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    @media (max-width: 768px) {
+      .miniaturas img {
+        width: 80px;
+        height: 60px;
+      }
+
+      .contenido-encima {
+        font-size: 14px;
+        padding: 15px;
+      }
+    }
+
+/*carrusel*/
+
+/*! Impacto y REsultados*/
+.impacto-resultados{
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.impacto-resultados h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-left: rgb(216, 13, 243) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+.items-imp-res{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.items-imp-res div {
+  background-color: rgb(162, 0, 255);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.items-imp-res div h3 {
+  color: white;
+  font-weight: 900;
+}
+.items-imp-res div p {
+  color: rgb(221, 218, 218);
+}
+
+/*! compromiso y sostenibilidad */
+.compromiso-sostenibilidad {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.compromiso-sostenibilidad h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-left: rgb(216, 13, 243) 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.compromiso-sostenibilidad .psom {
+  text-align: center;
+}
+
+.items-compromiso-sos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.items-compromiso-sos div h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-family: 'Lobster', cursive;
+    border: rgb(162, 0, 255) 3px solid;
+    border-radius: 10px;
+    text-align: center; 
+}
+.items-compromiso-sos div p {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--text-parrafos);
+  text-align: center;
+}
