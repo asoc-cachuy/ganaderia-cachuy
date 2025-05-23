@@ -75,7 +75,7 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 0.5rem;
     margin: 0;
-    border-left: #00FF5E 8px solid;
+    border-left: #0057D8 8px solid;
     color: rgb(17, 17, 17);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -100,8 +100,10 @@
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: green 3px solid;
+    border: #0057D8 3px solid;
     border-radius: 10px;
+    color: #0057D8;
+    text-align: center;
 }
 .textoC-contacto p{
     margin:  1rem 0 2rem 0;
@@ -112,13 +114,12 @@
 /*! btn */
 .btn-container{
   display: flex;
-  background-color: #aa1b1b;
 }
 .btne {
     flex: 1;
     font-size: 1rem;
     color: white;
-    background-color: green;
+    background-color: #0057D8;
     border: none;
     padding: 1rem 3rem;
     border: 1px solid rgb(255, 255, 255);
@@ -162,7 +163,7 @@ form .input {
     border-radius: 10px;
     padding: 1rem;
     color: var(--text-color);
-    border: green 3px solid;
+    border: #0057D8 3px solid;
     outline: none;
 }
 form .asunto{
@@ -171,7 +172,7 @@ form .asunto{
     padding: 1rem;
     background-color: transparent;
     color: var(--text-color);
-    border: green 3px solid;
+    border: #0057D8 3px solid;
     outline: none;
 }
 form textarea{
@@ -181,7 +182,7 @@ form textarea{
     height: 100px;
     background-color: transparent;
     color: var(--text-color);
-    border: green 3px solid;
+    border: #0057D8 3px solid;
     outline: none;
 
 }
@@ -193,8 +194,8 @@ form textarea{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 1rem 4rem;
   border-radius: 30px;
-  background-color: #00FF5E;
-  color: rgb(0, 0, 0);
+  background-color: #0057D8;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   margin-top: 3rem;
   font-weight: 900;
@@ -205,8 +206,11 @@ form textarea{
 .info-contactoB h3{
     padding: 1rem 1rem 0.5rem 1rem;
     font-size: 2rem;
-    border: green 3px solid;
+    border: #0057D8 3px solid;
     font-family: 'Lobster', cursive;
+    color: #0057D8;
+    border-radius: 15px;
+    text-align: center;
 }
 .info-contactoB .parrafos{
     margin:  1rem 0 2rem 0;
@@ -216,7 +220,7 @@ form textarea{
 }
 
 .container-dire{
-  background-color: green;
+  background-color: #0057D8;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -348,7 +352,7 @@ form textarea{
   background: none;
   border: none;
   font-size: 2rem;
-  color: green;
+  color: #0057D8;
   cursor: pointer;
   margin-right: 1rem;
 }
@@ -370,7 +374,7 @@ form textarea{
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 1rem 0 0.5rem 0;
     margin: 0;
-    border-left: #00FF5E 8px solid;
+    border-left: #0057D8 8px solid;
     color: rgb(17, 17, 17);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -397,7 +401,7 @@ form textarea{
     width: 100%w;
     padding: 1rem 0.5rem;
     font-size: 1.5rem;
-    background-color: #00FF5E;
+    background-color: #0057D8;
 }
 .mapa-info-container div iframe{
     width: 100%;
@@ -410,8 +414,11 @@ form textarea{
 .info-cos-mapa div h3{
     padding: 1rem 1rem 0.5rem 1rem;
     font-size: 2rem;
-    border: green 2px solid;
+    border: #0057D8 2px solid;
     font-family: 'Lobster', cursive;
+    color: #0057D8;
+    border-radius: 15px;
+    text-align: center;
 }
 .info-cos-mapa div p{
     font-size: 1rem;
@@ -426,7 +433,7 @@ form textarea{
     text-align: center;
 }
 .inf-ubi{
-  background-color: green;
+  background-color: #0057D8;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -450,8 +457,8 @@ form textarea{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 1rem 4rem;
     border-radius: 30px;
-    background-color: #00FF5E;
-    color: rgb(0, 0, 0);
+    background-color: #0057D8;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 900;
 }
@@ -460,7 +467,7 @@ form textarea{
 }
 .block{
     opacity: 0;
-    transform: translateX(-100px) scale(0.95);
+    transform: translateX(-10px) scale(0.95);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .block.show{

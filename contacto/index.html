@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="author" content="Untree.co">
+	<link rel="icon" href="../logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../logo.ico" type="image/x-icon">
+
+	<meta name="description" content="Contáctanos para asesoría ganadera, servicios veterinarios y más en Cachuy." />
+	<meta name="keywords" content="ganadería, asesoría ganadera, contacto, asociación ganadera cachuy" />
+	<meta name="author" content="Asociación Ganadera Cachuy" />
+
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
@@ -11,27 +19,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/contacto.css">
-    <title>Document</title>
+    <title>Contacto - Asociación Ganadera Cachuy</title>
 </head>
 <body>
     <div id="progress-bar-container">
         <div id="progress-bar"></div>
     </div>
 
-    <nav class="nav-continer">
+    <nav class="nav-container">
         <section class="nav">
-        <a href="../" class="logo-link">
+            <!-- Logo -->
+            <a href="../" class="logo-link">
             <img class="logo" src="../images/logosi.jpeg" alt="Logo" />
-        </a>
-        <ul class="nav-ul">
+            </a>
+
+            <!-- Botón hamburguesa -->
+            <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
+            <span class="hamburger"></span>
+            </button>
+
+            <!-- Lista de navegación -->
+            <ul class="nav-ul" id="navMenu">
             <li><a href="../" class="nav-link">Inicio</a></li>
             <li><a href="../ejemplares/" class="nav-link">Nuestros ejemplares</a></li>
             <li><a href="../proyectos/" class="nav-link">Proyectos</a></li>
             <li><a href="../nosotros/" class="nav-link">Nosotros</a></li>
             <li><a href="/contacto/" class="nav-link">Contacto</a></li>
-        </ul>
+            </ul>
         </section>
     </nav>
+    <div id="menuOverlay" class="menu-overlay"></div>
 
     <section class="inicio-contacto-container">
         <section class="seccion-contacto" id="bgContacto">

@@ -89,7 +89,7 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 0.5rem;
     margin: 0;
-    border-left: rgb(0, 225, 255) 8px solid;
+    border-left: #0057D8 8px solid;
     color: rgb(17, 17, 17);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -173,7 +173,7 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 0.5rem;
     margin: 0;
-    border-left: rgb(0, 225, 255) 8px solid;
+    border-left: #0057D8 8px solid;
     color: rgb(17, 17, 17);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -198,17 +198,19 @@
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: #00BFFF 3px solid;
+    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
+    color: #0057D8;
+    
 }
 .mision-texto .pmivi{
   margin: 1rem 0;
   padding: 1rem;
   border-radius: 10px;
   font-size: 1rem;
-  background-color: #00BFFF;
-  color: rgb(0, 0, 0);
+  background-color: #0057D8;
+  color: rgb(255, 255, 255);
 }
 
 .valores{
@@ -219,21 +221,21 @@
     margin: 0;
     padding: 0.3rem 0rem 0.3rem 0rem;
     font-family: 'Lobster', cursive;
-    border: #00BFFF 3px solid;
+    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
+    color: #0057D8;
 }
 .valores .p{
     margin: 1rem 0;
     font-size: 1rem;
     text-align: center;
-    color: var(--text-parrafos);
 }
 .valores-lista{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    background-color: #00BFFF;
+    background-color: #0057D8;
     padding: 1rem;
     border-radius: 15px;
 }
@@ -241,7 +243,7 @@
     font-size: 1.3rem;
     font-family: cursive;
     font-weight: 900;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-weight: 900;
 }
@@ -252,6 +254,7 @@
     padding: 0.5rem;
     border: rgb(255, 255, 255) 2px solid;
     border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 
 /*! modelo de Negocio */
@@ -269,7 +272,7 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 0.5rem;
     margin: 0;
-    border-left: rgb(0, 225, 255) 8px solid;
+    border-left: #0057D8 8px solid;
     color: rgb(17, 17, 17);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -294,7 +297,7 @@
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: #00BFFF 3px solid;
+    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
 }
@@ -303,7 +306,7 @@
     margin: 1rem 0;
     padding: 1rem;
     font-size: 1rem;
-    border: #00BFFF 3px solid ;
+    border: #0057D8 3px solid ;
     color: var(--text-parrafos);
 }
 .estadisticas{
@@ -316,7 +319,7 @@
     
 }
 .estadisticas div {
-    background-color:#00BFFF;
+    background-color:#0057D8;
     border-radius: 15px;
     padding: 1rem;
     font-size: clamp(1rem, 2vw, 1rem);
@@ -346,7 +349,7 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 0.5rem;
     margin: 0;
-    border-left: rgb(0, 225, 255) 8px solid;
+    border-left: #0057D8 8px solid;
     color: rgb(17, 17, 17);
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -365,7 +368,7 @@
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: #00BFFF 3px solid;
+    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
 }
