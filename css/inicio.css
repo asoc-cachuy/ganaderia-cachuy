@@ -6,11 +6,12 @@
   --text-parrafos: rgb(39, 39, 39);
   --border-bottom: #928f8f98;
 }
+
 /*! imagen y su texto*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .inicio-contacto-container {
   position: relative;

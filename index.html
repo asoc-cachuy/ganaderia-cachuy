@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Untree.co">
+	<link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+	<meta name="description" content="Contáctanos para asesoría ganadera, servicios veterinarios y más en Cachuy." />
+	<meta name="keywords" content="ganadería, asesoría ganadera, contacto, asociación ganadera cachuy" />
+	<meta name="author" content="Asociación Ganadera Cachuy" />
+
+
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
@@ -11,29 +20,44 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/inicio.css">
-    <title>Gnaderia-cachuy</title>
+    <title>Inicio - Asociación Ganadera Cachuy</title>
 </head>
 <body>
+    <!--! loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
 
-    <nav class="nav-continer reveal">
+
+    <nav class="nav-container">
         <section class="nav">
-            <a href="/" class="">AGC</a>
-            <ul class="nav-ul">
-                <li class="active "><a href="/">Inicio</a></li>
-                <li class="">
-                    <a href="./ejemplares/">Nuestros ejemplares</a>
-                </li>
-                <li><a href="./proyectos/">Proyectos</a></li>
-                <li><a href="./nosotros/">Nosotros</a></li>
-                <li><a href="./contacto/">Contacto</a></li>
-            </ul>
-        </section>    
-	</nav>
+            <!-- Logo -->
+            <a href="/" class="logo-link">
+            <img class="logo" src="../images/logosi.jpeg" alt="Logo" />
+            </a>
 
-    <!-- inicio principal -->
+            <!-- Botón hamburguesa -->
+            <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
+            <span class="hamburger"></span>
+            </button>
+
+            <!-- Lista de navegación -->
+            <ul class="nav-ul" id="navMenu">
+            <li><a href="/" class="nav-link">Inicio</a></li>
+            <li><a href="./ejemplares/" class="nav-link">Nuestros ejemplares</a></li>
+            <li><a href="./proyectos/" class="nav-link">Proyectos</a></li>
+            <li><a href="./nosotros/" class="nav-link">Nosotros</a></li>
+            <li><a href="./contacto/" class="nav-link">Contacto</a></li>
+            </ul>
+        </section>
+    </nav>
+    <div id="menuOverlay" class="menu-overlay"></div>
+    
+
+    <!--! inicio principal -->
     <main>
 
-        <section class="seccion-contacto reveal">
+        <section class="seccion-contacto">
             <div class="texto-contacto">
                 <p>Tradición, calidad y excelencia en genética ganadera</p>
                 <h1 class="titulo-contacto">
@@ -322,5 +346,9 @@
     <!-- incluye la libreria scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/main.js"></script>
+    <script src="./js//loader.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/menu.js"></script>
+
 </body>
 </html>
