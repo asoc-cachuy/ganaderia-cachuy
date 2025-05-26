@@ -126,7 +126,7 @@
 }
 .inicio-garantia {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
   background-color: #f5f7fa;
@@ -409,7 +409,7 @@ p {
 
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -483,7 +483,7 @@ p {
 
 .alianzas-textos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -530,7 +530,6 @@ p {
 
 
 /*! responsividad */
-/* ...código original omitido por brevedad... */
 /* ...código original omitido por brevedad... */
 
 @media (max-width: 1024px) {
@@ -585,7 +584,7 @@ p {
 @media (max-width: 768px) {
   /* Móviles grandes */
   .inicio-garantia {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .contenedor-cifras .items-cifras {
     grid-template-columns: 1fr 1fr;
@@ -640,6 +639,9 @@ p {
     height: auto;
     max-width: 100%;
     border-radius: 10px;
+  }
+  .grid-proyectos{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -696,9 +698,14 @@ p {
     max-width: 100%;
     border-radius: 10px;
   }
+  .grid-proyectos{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Mejora en botones */
+
+
 .btn, .contenedor-btn-ejemplares a, .contenedor-btn3 .btn0 {
   background-color: #0057D8;
   color: #fff;
