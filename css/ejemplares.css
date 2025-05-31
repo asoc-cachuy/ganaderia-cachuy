@@ -14,9 +14,7 @@
 }
 .inicio-contacto-container {
   position: relative;
-  height: 100vh;
   width: 100%;
-  overflow-x: hidden;
 }
 .seccion-contacto {
   background-image: url('../images/perfil-proyecto.jpg');
@@ -75,88 +73,314 @@
 .titulo-contacto span:nth-child(8) { animation-delay: 1.4s; }
 .titulo-contacto span:nth-child(9) { animation-delay: 1.6s; }
 .titulo-contacto span:nth-child(10) { animation-delay: 1.8s; }
-/*! seccion ejemplares */
-.seccion-ejemplares-container{
+
+/*! Diversidad */
+.diversidad{
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  animation: fadeIn 1s ease;
+}
+.diversidad h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+    padding: 1rem 0;
+    margin: 1rem;
+    border-left: #0057D8 8px solid;
+    color: rgb(17, 17, 17);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 1rem;
+    font-family: 'Underdog', cursive;
+    font-weight: 900;
+}
+.diversidad .subtitulo-cat{
+    text-align: center;
+    margin: 1rem;
+}
+.diversidad-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f5f7fa;
+}
+.diversidad-items h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.5rem 1rem 0.3rem 1rem;
+    font-family: 'Lobster', cursive;
+    border-radius: 10px;
+    color: #0057D8;
+    text-align: center;
+}
+.garantia-item {
+  background: white;
+  border: 2px solid #0057D8;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(2, 97, 240, 0.377);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease;
+}
+
+.garantia-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 87, 216, 0.2);
+}
+
+.icono {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 100px;
+  height: 3px;
+  background-color: #0057D8;
+  border: none;
+  margin: 0.2rem auto 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+
+.btn:hover {
+  background-color: #003f9a;
+  transform: scale(1.05);
+}
+/*! Galeria de proyectos */
+.galeria-proyectos {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
+  margin-top: 5rem;
 }
-.seccion-ejemplares-container h2 {
+.galeria-proyectos h2{
   font-size: clamp(2rem, 4vw, 2.5rem);
-  padding: 0.5rem;
-  margin: 0;
+  padding: 1rem 0.5rem;
+  margin-bottom: 2rem;
   border-left: #0057D8 8px solid;
   color: rgb(17, 17, 17);
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-  padding-left: 1rem;
   font-family: 'Underdog', cursive;
+  font-weight: 900;
+  padding-left: 1rem;
 }
-.texto-inicial-ejemplares{
-  text-align: center;
+.carrusel-contenedor {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  border-radius: 12px;
 }
-.texto-inicial-ejemplares p {
-  font-size: 1rem;
-  margin-top: 2rem;
-  color: var(--text-parrafos);
-}
-.btns-ejemplares{
+
+.miniaturas {
   display: flex;
-  margin: 1rem 0;
+  gap: 16px;
+  will-change: transform;
 }
-.btns-ejemplares button {
-  flex: 1;
-  padding: 1rem;
-  background-color: #0057D8;
-  border: #ffffff 1px solid;
-  color: #f8f7f3;
+
+.miniaturas img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.4s, opacity 0.4s;
+  opacity: 0.8;
+}
+
+.miniaturas img:hover {
+  transform: scale(1.1);
+  opacity: 1;
   cursor: pointer;
 }
 
-.items-ejemplares h3{
-    font-size: 2rem;
-    margin-top: 1rem;
-    padding: 1rem 1rem 0.5rem 1rem;
-    font-family: 'Lobster', cursive;
-    border: #0057D8 3px solid;
-    border-radius: 10px;
-    text-align: center;
+.imagen-principal {
+  margin-top: 20px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 14px;
 }
-.items-ejemplaresG {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-}
-.items-ejemplaresG .items img{
-  flex: 1;
+
+.imagen-principal img {
   width: 100%;
-  height: 300px;
-  border-radius: 10px;
-
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
 }
-
-/*! campromiso calidad */
-.compromiso-calidad-container{
-  max-width: 1400px;
+/*! catalogo */
+.catalogo{
+  width: 1400px;
   margin: 0 auto;
+  margin-top: 5rem;
+  animation: fadeIn 1s ease;
 }
-
-.compromiso-calidad-container h2{
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  padding: 0.5rem;
-  margin: 0;
+.catalogo h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  padding: 1rem 0;
+  margin: 1rem;
   border-left: #0057D8 8px solid;
   color: rgb(17, 17, 17);
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   padding-left: 1rem;
   font-family: 'Underdog', cursive;
+  font-weight: 900;
+}
+.catalogo .subtitulo-cat{
+  text-align: center;
+  margin: 1rem;
+}
+.catalogo-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+.catalogo-items h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.5rem 1rem 0.3rem 1rem;
+    font-family: 'Lobster', cursive;
+    border-radius: 10px;
+    color: #0057D8;
+    text-align: center;
 }
 
-/*! boton ejemplares */
-.seccion-ejemplares {
-  display: none;
+/*! galeria */
+.galeria-catalogo {
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.seccion-ejemplares.activa {
+.galeria-titulo {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.galeria-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-pag {
+  background-color: #14532d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pag.active,
+.btn-pag:hover {
+  background-color: #166534;
+}
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .diversidad,
+  .conocimiento,
+  .catalogo {
+    width: 95%;
+  }
+
+  .diversidad-items,
+  .conocimiento-items,
+  .catalogo-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .texto-contacto h1,
+  .texto-contacto p {
+    margin-left: 2rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .diversidad-items,
+  .conocimiento-items,
+  .catalogo-items {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diversidad,
+  .conocimiento,
+  .catalogo {
+    width: 100%;
+    margin: 3rem 1rem;
+  }
+
+  .texto-contacto h1 {
+    font-size: clamp(1.5rem, 7vw, 4rem);
+    margin-left: 1rem;
+  }
+
+  .texto-contacto p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin-left: 1rem;
+  }
+
+  .seccion-contacto {
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .btn-pag {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 }

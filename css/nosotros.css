@@ -8,15 +8,14 @@
 }
 /*! imagen y su texto*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .inicio-contacto-container {
   position: relative;
-  height: 100vh;
+  height: 60vh;
   width: 100%;
-  overflow-x: hidden;
 }
 .seccion-contacto {
   background-image: url('../images/perfil-proyecto.jpg');
@@ -24,25 +23,28 @@
   background-position: center;
   height: 60vh;
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  text-align: center;
 }
 .texto-contacto {
   margin-top: 20vh;
 }
 .texto-contacto h1 {
-  font-size: clamp(2rem, 8vw, 10rem);
-  margin: 0 0 0 5rem;
+  font-size: clamp(4rem, 6vw, 7rem);
   color: white;
+  margin: 1rem;
   font-family:'Cherry Bomb One', cursive;
 }
+
 .titulo-contacto span {
+  text-transform: uppercase;
   display: inline-block;
   animation: pulseBounceGlow 1.5s ease-in-out infinite;
   opacity: 0;
 }
 .texto-contacto p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  margin: 0 0 0 5rem;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  margin: 1rem;
   color: white;
 }
 @keyframes pulseBounceGlow {
@@ -72,10 +74,15 @@
 .titulo-contacto span:nth-child(6) { animation-delay: 1s; }
 .titulo-contacto span:nth-child(7) { animation-delay: 1.2s; }
 .titulo-contacto span:nth-child(8) { animation-delay: 1.4s; }
-
+.titulo-contacto span:nth-child(9) { animation-delay: 1.6s; }
 
 /*! sobre nosotros */
-
+.contenedor-h2{
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
 .sobre-nosotros{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,7 +92,7 @@
     margin: 0 auto;
     margin-top: 7rem;
 }
-.sobre-nosotros div h2{
+h2{
     font-size: clamp(2rem, 4vw, 2.5rem);
     padding: 0.5rem;
     margin: 0;
@@ -96,73 +103,122 @@
     padding-left: 1rem;
     font-family: 'Underdog', cursive;
 }
-.sobre-nosotros div p{
-    font-size: 1rem;
-    margin-top: 2rem;
-    color: var(--text-parrafos);
-}
+
 /*! carrusel*/
-.carrusel {
-  position: relative;
-  width: 800px;
-  height: 600px;
-  margin: 40px auto;
+.asociacion-card {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.carrusel-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100%;
+}
+
+.texto {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.texto h2 {
+  font-size: 2.5rem;
+  color: #1f3b28;
+}
+
+.texto p {
+    font-size: 2rem;
+    color: var(--text-parrafos);
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+}
+
+/* Galería completamente rellena */
+.galeria {
+  display: grid;
+  grid-template-areas: 
+    "a b"
+    "c b"
+    "d d";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   height: 100%;
+  width: 700px;
+  height: 700px;
 }
 
-.carrusel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-.carrusel-item.active {
-  display: block;
-}
-
-.carrusel-item img {
+.img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  display: block;
 }
 
-.carrusel-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+/* Posiciones exactas para relleno total */
+.img:nth-child(1) { grid-area: a; }
+.img:nth-child(2) { grid-area: b; }
+.img:nth-child(3) { grid-area: c; }
+.img:nth-child(4) { grid-area: d; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-areas: 
+      "a b"
+      "c b"
+      "d d";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .texto {
+    padding: 30px;
+  }
 }
 
-.carrusel-prev, .carrusel-next {
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-areas: 
+      "a"
+      "b"
+      "c"
+      "d";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 120px);
+  }
+
+  .texto h2 {
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+  }
 }
 
-.carrusel-prev svg, .carrusel-next svg {
-  width: 24px;
-  height: 24px;
-  fill: #333;
-}
-
-.carrusel-prev:hover svg, .carrusel-next:hover svg {
-  fill: #555;
-}
 /*! mision */
 .misiones{
   max-width: 1400px;
@@ -181,36 +237,57 @@
     font-family: 'Underdog', cursive;
 }
 .misiones .pe{
-    font-size: 1rem;
+    font-size: 2rem;
     margin-top: 0.5rem;
     color: var(--text-parrafos);
     text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
 }
 .mision{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     color: var(--text-color);
+    padding: 0.5rem;
     margin-top: 2rem;
+}
+.mision-texto{
+  background-color: #ce1212;
+}
+.mision-texto {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.082);
+  margin-bottom: 1rem;
+}
+
+.mision-texto:hover {
+  box-shadow: 0 4px 14px rgba(0, 17, 41, 0.377);
+  transform: translateY(-6px);
+
 }
 .mision-texto h3 {
     font-size: 2rem;
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: #0057D8 3px solid;
     border-radius: 10px;
-    text-align: center;
     color: #0057D8;
-    
+    text-align: center;
 }
 .mision-texto .pmivi{
   margin: 1rem 0;
   padding: 1rem;
   border-radius: 10px;
-  font-size: 1rem;
-  background-color: #0057D8;
-  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
 }
 
 .valores{
@@ -221,21 +298,21 @@
     margin: 0;
     padding: 0.3rem 0rem 0.3rem 0rem;
     font-family: 'Lobster', cursive;
-    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
     color: #0057D8;
 }
 .valores .p{
     margin: 1rem 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
 }
 .valores-lista{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    background-color: #0057D8;
     padding: 1rem;
     border-radius: 15px;
 }
@@ -243,20 +320,35 @@
     font-size: 1.3rem;
     font-family: cursive;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: #0057D8;
     text-align: center;
     font-weight: 900;
 }
 .valores-lista div p{
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-top: 0.5rem;
     color: rgb(0, 0, 0);
     padding: 0.5rem;
     border: rgb(255, 255, 255) 2px solid;
     border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
 }
-
+.responsabilidad-div{
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.082);
+  margin-bottom: 1rem;
+}
+.responsabilidad-div:hover {
+  box-shadow: 0 4px 14px rgba(0, 17, 41, 0.377);
+  transform: translateY(-6px);
+}
 /*! modelo de Negocio */
 
 .container-modelo-negocio{
@@ -282,7 +374,9 @@
 
 .modelo-negocio .mdn{
      text-align: center;
-     padding: 1rem;
+     padding: 1.5rem;
+      font-family: 'Caveat', cursive;
+      font-size: 2rem; 
 }
 
 .produccion{
@@ -297,17 +391,18 @@
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
+    color: #0057D8;
 }
 
 .produccion div p{
     margin: 1rem 0;
     padding: 1rem;
-    font-size: 1rem;
-    border: #0057D8 3px solid ;
+    font-size: 1.5rem;
     color: var(--text-parrafos);
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
 }
 .estadisticas{
     display: grid;
@@ -319,30 +414,43 @@
     
 }
 .estadisticas div {
-    background-color:#0057D8;
     border-radius: 15px;
     padding: 1rem;
     font-size: clamp(1rem, 2vw, 1rem);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.082);
+  margin-bottom: 1rem;
+}
+.estadisticas div:hover {
+  box-shadow: 0 4px 14px rgba(0, 17, 41, 0.377);
+  transform: translateY(-6px);
 }
 .estadisticas div h3{
-    color: rgb(0, 0, 0);
+    color: #0057D8;
+    font-size: 2rem;
     text-align: center;
     font-family: 'Lobster', cursive;
 }
 .estadisticas div p{
-    color: rgb(95, 91, 91);
+  font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
 }
 /*! impulsamos la ganaderia */
 .impulsamos{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 1rem;
-
     color: var(--text-color);
 }
 .container-impulsamos{
     color: var(--text-color);
-        margin: 7rem 0;
+    margin: 7rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 5rem;
 }
 
 .container-impulsamos h2{
@@ -357,29 +465,116 @@
     font-family: 'Underdog', cursive;
 }
 .impulsamos-texto p{
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--text-parrafos);
     padding: 1rem;
     text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
 }
 .impulsamos h3{
     font-size: 2rem;
     margin: 0;
     padding: 1rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
-    border: #0057D8 3px solid;
     border-radius: 10px;
     text-align: center;
+    color: #0057D8;
 }
 .impulsamos p{
-    font-size: 1rem;
     margin-bottom: 2rem;
     color: var(--text-parrafos);
     padding: 2rem;
     text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+
+}
+#producer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
 }
 
+.producer-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.producer-button:hover {
+  transform: scale(1.1);
+  outline: 2px solid #0057D8;
+}
+
+#producer-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.producer-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 2rem 0;
+  width: 100%;
+  margin: 1rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.producer-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  border: 4px solid #0057D8;
+}
+
+.producer-card h4 {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  color: #0057D8;
+}
+
+.producer-card blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.producer-card p {
+font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  color: #1b1a1ad7;
+}
+
+@media (max-width: 768px) {
+  .impulsamos {
+    grid-template-columns: 1fr;
+  }
+
+  #producer-card-container {
+    padding: 1rem;
+  }
+
+  .producer-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+/*! responsive */
 @media (max-width: 1024px) {
   .sobre-nosotros,
   .mision {
@@ -441,4 +636,14 @@
   .carrusel-controls {
     padding: 0 1rem;
   }
+}
+@media (max-width: 360px) {
+ .texto p{
+    font-size: 1.5rem;
+ }
+}
+
+footer{
+  background-color: #0057D8;
+  color: #fff;
 }
