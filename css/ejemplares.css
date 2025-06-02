@@ -17,10 +17,10 @@
   width: 100%;
 }
 .seccion-contacto {
-  background-image: url('../images/perfil-proyecto.jpg');
+  background-image: url('../images/pastizal-perfil.jpg');
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 90vh;
   display: flex;
   justify-content: left;
 }

@@ -17,11 +17,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+
 
     
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/inicio.css">
+
+    <!-- tree.js -->
+     <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- SwiperJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+
     <title>Inicio - Asociación Ganadera</title>
 </head>
 <body>
@@ -73,97 +85,111 @@
         </section>
     </main>
 
-    <section class="inicio-contenido bloque">
+    <section class="inicio-contenido">
         <div class="excelencia-ccontainer">
-            <h2>Excelencia, Trayectoria y Atención</h2>
+            <h2> Excelencia, <span>Trayectoria </span>y Atención</h2>
             <p class="pcentrar">
                 Nuestro compromiso es brindar excelencia en cada etapa de la actividad ganadera, desde la crianza responsable hasta la comercialización del animal en pie
             </p>
         </div>
+    </section>
 
-        <section class="c-g-ig">
-            <section class="inicio-garantia">
-                <div class="garantia-item">
-                    <div class="icono">🐮</div>
-                    <h3>Calidad Garantizada</h3>
-                    <hr>
-                    <p>
-                        Animales fuertes, bien manejados y provenientes de sistemas responsables. Ofrecemos ejemplares seleccionados y comercialización directa desde el campo.
-                    </p>
-                    <button class="btn" onclick="abrirModal('calidad')">Ver más</button>
+    <section>
+          <canvas id="background-particles"></canvas>
+        <section class="inicio-garantia">
+        <div class="garantia-container">
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide garantia-item gradient-green"style="--i:0">
+                  <div class="icono">🐮</div>
+                  <h3 class="garantia-h3">Calidad Garantizada</h3>
+                  <hr class="garantia-hr">
+                  <p class="garantia-p">Animales fuertes, bien manejados y provenientes de sistemas responsables. Ofrecemos ejemplares seleccionados y comercialización directa desde el campo.</p>
+                  <button class="btn cali" onclick="abrirModal('calidad')">Proyectos</button>
                 </div>
-
-                <div class="garantia-item">
-                    <div class="icono">🤝</div>
-                    <h3>Experiencia y Confianza</h3>
-                    <hr>
-                    <p>
-                        Con amplia experiencia en el rubro, somos una asociación de productores ganaderos que impulsa el desarrollo regional con trabajo conjunto y compromiso.
-                    </p>
-                    <button class="btn" onclick="abrirModal('experiencia')" >Ver más</button>
+                <div class="swiper-slide garantia-item gradient-orange" style="--i:1">
+                  <div class="icono">🤝</div>
+                  <h3 class="experiencia-h3">Experiencia y Confianza</h3>
+                  <hr class="experiencia-hr">
+                  <p class="experiencia-p">Animales fuertes, bien manejados y provenientes de sistemas responsables. Ofrecemos ejemplares seleccionados y comercialización directa desde el campo.</p>
+                  <button class="btn expe" onclick="abrirModal('experiencia')">Conócenos</button>
                 </div>
-
-                <div class="garantia-item">
-                    <div class="icono">🌱</div>
-                    <h3>Producción Responsable</h3>
-                    <hr>
-                    <p>
-                        Trabajamos por una ganadería sostenible, rentable y respetuosa, priorizando el bienestar animal y evitando prácticas abusivas o intermediación innecesaria.
-                    </p>
-                    <button class="btn" onclick="abrirModal('responsable')">Ver más</button>
+                <div class="swiper-slide garantia-item gradient-purple" style="--i:2">
+                  <div class="icono">🌱</div>
+                  <h3 class="produ-h3">Producción Responsable</h3>
+                  <hr class="produ-hr">
+                  <p class="produ-p">Trabajamos por una ganadería sostenible, rentable y respetuosa, priorizando el bienestar animal y evitando prácticas abusivas o intermediación innecesaria. </p>
+                  <button class="btn produ" onclick="abrirModal('responsable')">Catálogo</button>
                 </div>
-
-                <div class="garantia-item">
-                    <div class="icono">📞</div>
-                    <h3>Asistencia Permanente</h3>
-                    <hr>
-                    <p>
-                    Los socios ganaderos están siempre listos para responder tus inquietudes y acompañarte en todo el proceso, ofreciendo atención cercana y constante.
-                    </p>
-                    <button class="btn" onclick="abrirModal('asistencia')">Contáctanos</button>
+                <div class="swiper-slide garantia-item gradient-blue" style="--i:3">
+                  <div class="icono">📞</div>
+                  <h3 class="conta-h3">Asistencia Permanente</h3>
+                  <hr class="conta-hr">
+                  <p class="conta-p">Los socios ganaderos están siempre listos para responder tus inquietudes y acompañarte en todo el proceso, ofreciendo atención cercana y constante.</p>
+                  <button class="btn moderator" onclick="abrirModal('asistencia')">Contáctanos</button>
                 </div>
-            </section>
+            </div>
+            <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+            </div>
+        </div>
         </section>
         
+      </section>
+
+    <section>
 
 
 
-        <section class="seccion-ejemplares">
+<section class="seccion-ejemplares">
+
+
   <div class="contenedor">
     <header class="cabecera-ejemplares">
-      <h2>Selección Representativa</h2>
+      <h2 class="titulo-seccion">Selección <span>Representativa</span> </h2>
       <p class="descripcion">
         Descubre una muestra de nuestro ganado vacuno, criado en condiciones óptimas por los miembros de la Asociación de Ganaderos Asunción de Cachuy. Cada lote refleja nuestro compromiso con la calidad, el bienestar animal y el manejo responsable.
       </p>
     </header>
 
-    <article class="contenido-ejemplar">
-      <h3>Selección Destacada</h3>
-      <p class="descripcion">
-        Conoce una muestra visual de nuestro trabajo en el campo. Estas fotografías representan el tipo de ganado que criamos con responsabilidad y dedicación.
-      </p>
+    <div class="boton-contenedor">
+      <a href="./ejemplares/" class="btn boton-principal">Explorar Catálogo Completo</a>
+    </div>
 
-      <div class="boton-contenedor">
-        <a href="./ejemplares/" class="boton-principal">Explorar Catálogo Completo</a>
-      </div>
-
-      <div class="carrusel-contenedor">
-        <div class="carrusel" id="carrusel">
-          <div class="item"><img src="./images/toro-noche1.jpg" alt="Toro 1"></div>
-          <div class="item"><img src="./images/toro-noche1.jpg" alt="Toro 2"></div>
-          <div class="item"><img src="./images/toro-noche1.jpg" alt="Toro 3"></div>
+    <div class="carrusel-contenedor">
+      <div class="swiper mySwiperEjemplares">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card-ejemplar gradient-gree">
+            <img src="./images/TORO1.jpg" alt="Toro 1" />
+          </div>
+          <div class="swiper-slide card-ejemplar gradient-orang">
+            <img src="./images/TORO2.jpg" alt="Toro 2" />
+          </div>
+          <div class="swiper-slide card-ejemplar gradient-purpl">
+            <img src="./images/TORO3.webp" alt="Toro 3" />
+          </div>
+          <div class="swiper-slide card-ejemplar gradient-blu">
+            <img src="./images/TORO4.jpg" alt="Toro 4" />
+          </div>
+          <div class="swiper-slide card-ejemplar gradient-gree">
+            <img src="./images/TO" alt="Toro 5" />
+          </div>
+          <div class="swiper-slide card-ejemplar gradient-orang">
+            <img src="./images/toro-noche1.jpg" alt="Toro 6" />
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
-    </article>
+    </div>
   </div>
 </section>
 
 
 
         <section class="contenido-testimonios">
-            <div>
-                <h2>Opiniones de Clientes</h2>
-                <p class="pcentrar">
+            <div class="cabecera-testimonios">
+                <h2><span>Opiniones </span> de Clientes</h2>
+                <p>
                      experiencias de nuestros clientes reflejan la excelencia en la calidad de nuestro ganado y la dedicación en la atención brindada.
                 </p>
             </div>
@@ -176,7 +202,7 @@
                                     La experiencia ha sido realmente positiva. La calidad del ganado se refleja en mejores resultados productivos y en una operación más eficiente en el campo.
                                 </p>
                                 <p class="autor">
-                                Pedro Rodrigues<br />
+                                  《 Pedro Rodrigues 》<br />
                                 </p>
                             </div>
 
@@ -185,7 +211,7 @@
                                 Ha sido una experiencia muy satisfactoria. La seriedad en el trato y la calidad de los lotes recibidos nos han dado resultados concretos en productividad y reposición.
                                 </p>
                                 <p class="autor">
-                                Analí Torres<br />
+                                《 Analí Torres 》<br />
                                 </p>
                             </div>
 
@@ -194,21 +220,21 @@
                                     El compromiso de la asociación se refleja en cada entrega. Animales bien manejados, fuertes y con excelente respuesta en el campo. Una experiencia confiable de principio a fin.
                                 </p>
                                 <p class="autor">
-                                Carlos Muños<br />
+                                《 Carlos Muños 》<br />
                                 </p>
                             </div>
                             <div class="testimonio">
                                 <p class="comentario">
                                    Trabajar con la asociación fue una decisión acertada. La entrega fue puntual, el ganado llegó en óptimas condiciones y ya vemos mejoras en nuestro plantel reproductor.
                                 <p class="autor">
-                                Freddy Taipe<br />
+                                《 Freddy Taipe 》<br />
                                 </p>
                             </div>
                             <div class="testimonio">
                                 <p class="comentario">
                                    Lo que más valoramos es la transparencia y el manejo responsable del ganado. La calidad que recibimos respalda totalmente la reputación de la asociación.
                                 <p class="autor">
-                                Flor Mallma<br />
+                                《 Flor Mallma 》<br />
                                 </p>
                             </div>
                         </div>
@@ -221,74 +247,53 @@
             </section> 
         </section>
 
-        <section class="contenido-proyectos-des">
-            <div>
-                <h2>Proyectos Destacados</h2>
+
+<!--! SE ACABO ASTA AHI -->
+       
+            <div class="proyectos-titulo">
+                <h2>Proyectos<span> Destacados</span></h2>
                 <p class="pcentrar">Innovación y desarrollo sostenible para el mejoramiento continuo de nuestra ganadería.</p>
             </div>
-            <section class="grid-proyectos">
-                <div class="card-proyecto">
-                    <img src="./images/pastosyforrajes.jpg" alt="Proyecto 1">
-                    <h3>🌾 Manejo y Mejoramiento de Pastisales</h3>
-                    <p>Trabajamos juntos en el mejoramiento de nuestras pasturas, un proyecto que mejora la nutrición del ganado y marca un avance importante para nuestra asociación.</p>
-                </div>
-                <div class="card-proyecto">
-                    <img src="./images/mejora-corrales.jpg" alt="Proyecto 2">
-                    <h3>🏗️ Mejoras en los corrales y espacios de manejo</h3>
-                    <p>Estamos iniciando la mejora de nuestros corrales, mangas y bebederos, un paso importante para facilitar el manejo del ganado y cuidar mejor a nuestros animales.</p>
-                </div>
-                <div class="card-proyecto">
-                    <img src="./images/pastoalamacen.jpg" alt="Proyecto 3">
-                    <h3> 🐮 Reserva de Alimentos para el Ganado</h3>
-                    <p>Tenemos en marcha la planificación de un espacio donde almacenar forraje y suplementos, pensando en asegurar comida para nuestro ganado en tiempos difíciles.</p>
-                </div>
+            <section class="contenido-pro">
+                <section class="contenido-proyectos-des">    
+                  <section class="grid-proyectos">
+                      <div class="card-proyecto card-man">
+                          <img src="./images/pastosyforrajes.jpg" alt="Proyecto 1">
+                          <h3 class="man">🌾 Manejo y Mejoramiento de Pastisales</h3>
+                          <p>Trabajamos juntos en el mejoramiento de nuestras pasturas, un proyecto que mejora la nutrición del ganado y marca un avance importante para nuestra asociación.</p>
+                      </div>
+                      <div class="card-proyecto card-mej">
+                          <img src="./images/mejora-corrales.jpg" alt="Proyecto 2">
+                          <h3 class="mej">🏗️ Mejoras en los corrales y espacios de manejo</h3>
+                          <p>Estamos iniciando la mejora de nuestros corrales, mangas y bebederos, un paso importante para facilitar el manejo del ganado y cuidar mejor a nuestros animales.</p>
+                      </div>
+                      <div class="card-proyecto card-res">
+                          <img src="./images/pastoalamacen.jpg" alt="Proyecto 3">
+                          <h3 class="res"> 🐮 Reserva de Alimentos para el Ganado</h3>
+                          <p>Tenemos en marcha la planificación de un espacio donde almacenar forraje y suplementos, pensando en asegurar comida para nuestro ganado en tiempos difíciles.</p>
+                      </div>
+                  </section>
+                  <div style="text-align: center; margin-top: 2rem; transition: all 0.3s;">
+                    <button class="btn btn-transparente">Ver Todos los Proyectos</button>
+                  </div>
+              </section>
             </section>
-            <div style="text-align: center; margin-top: 2rem;">
-                <button class="btn btn-transparente">Ver Todos los Proyectos</button>
-            </div>
-        </section>
+        
 
+<section class="contenido-alianzas">
+  <div>
+    <h2 class="titulo-seccion">Entidades que impulsan nuestro crecimiento</h2>
+    <p class="pcentrar">
+      Trabajamos en estrecha colaboración con entidades nacionales e internacionales que comparten nuestra visión de 
+      desarrollar una ganadería sostenible, competitiva e inclusiva en el Perú.
+    </p>
+  </div>
 
-        <section class="contenido-alianzas">
-            <div>
-                <h2>Entidades que impulsan nuestro crecimiento</h2>
-                <p class="pcentrar">
-                Trabajamos en estrecha colaboración con entidades nacionales e internacionales que comparten nuestra visión de 
-                desarrollar una ganadería sostenible, competitiva e inclusiva en el Perú.
-                </p>
-            </div>
+  <p class="pcentrar mensaje-final">
+    "Juntos construimos un futuro ganadero sostenible para las comunidades rurales del Perú."
+  </p>
+</section>
 
-            <div class="alianzas-textos">
-                <div class="card-alianza">
-                    <img src="./images/fida.jpg" alt="">
-                    <p>
-                        Fondo internacional que impulsa proyectos rurales sostenibles, mejorando los ingresos, la seguridad alimentaria y el bienestar de las comunidades más vulnerables del campo.
-                    </p>
-                </div>
-                <div class="card-alianza">
-                    <img src="./images/agrorural.png" alt="">
-                    <p>
-                        Programa nacional que impulsa el desarrollo agrario con enfoque territorial, brindando asistencia técnica, mejora de infraestructuras y apoyo directo a organizaciones rurales.
-                    </p>
-                </div>
-                <div class="card-alianza">
-                    <img src="./images/avanzar.jpg" alt="">
-                    <p>
-                        Programa orientado a fortalecer emprendimientos rurales, promoviendo la inclusión económica y el desarrollo productivo sostenible de asociaciones y pequeños productores.
-                    </p>
-                </div>
-                <div class="card-alianza">
-                    <img src="./images/ministerio.jpg" alt="">
-                    <p>
-                        Programa orientado a fortalecer emprendimientos rurales, promoviendo la inclusión económica y el desarrollo productivo sostenible de asociaciones y pequeños productores.
-                    </p>
-                </div>
-            </div>
-
-            <p class="pcentrar mensaje-final">
-                "Juntos construimos un futuro ganadero sostenible para las comunidades rurales del Perú."
-            </p>
-        </section>
 
         
     </section>
@@ -306,7 +311,8 @@
     <script src="./js/menu.js"></script>
     <script src="./js/comentarios.js"></script>
     <script src="./js/cifras.js"></script>
-    <script src="./js/carrussel-ejemplar.js"></script>
+    <script src="./js/swipe.js"></script>
+    <script src="./js/three.js"></script>
 
 </body>
 </html>
