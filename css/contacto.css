@@ -18,10 +18,10 @@
   width: 100%;
 }
 .seccion-contacto {
-  background-image: url('../images/perfil-proyecto.jpg');
+  background-image: url('../images/contacto-perfil.jpg');
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
 }
@@ -78,16 +78,19 @@
 .titulo-contacto span:nth-child(11) { animation-delay: 2s; }
 
 /*! cuepo de contacto  */
-
+.contacto-con- {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 25rem;
+}
 .container-form-info{
+  position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
     color: var(--text-color);
     border-radius: 20px ;
-    max-width: 1400px;
-    margin: 0 auto;
-    margin-top: 5rem;
+
 }
 /* texto contacto info*/
 
@@ -95,23 +98,26 @@
     border-radius: 15px;
 }
 .textoB-contacto h2 {
-    font-size: clamp(1.3rem, 4vw, 3rem);
+    font-size: clamp(1.3rem, 4vw, 4rem);
     padding: 1rem 0;
     margin: 1rem;
-    border-left: #0057D8 8px solid;
-    color: rgb(17, 17, 17);
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
+    color: rgb(255, 255, 255);
     padding-left: 1rem;
     font-family: 'Underdog', cursive;
     font-weight: 900;
 }
+.textoB-contacto h2 span{
+    color: #00c853;
+    font-family:'Cherry Bomb One', cursive;
+    font-size: 5rem;
+}
 .textoB-contacto p{
-    font-size: 2rem;
-    color: var(--text-parrafos);
+    font-size: 1.5rem;
     margin: 1rem;
-    margin-top: 3rem;
-    font-family: 'Caveat', cursive;
+    margin-top: 3rem 0;
+    color: #ffffff;
+    text-align: center;
+
 }
 /*! texto header de form */
 .textoC-contacto {
@@ -127,7 +133,7 @@
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
     border-radius: 10px;
-    color: #0057D8;
+    color: #00c853;
     text-align: center;
     margin: 0 auto;
 }
@@ -135,11 +141,9 @@
 
 form {
   margin-top: 3rem;
-  background-color: #f5f7fa;
   padding: 1rem;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: #df0ef1 0px 0px 12px 0px;
+  color: rgb(255, 255, 255);
 
 }
 
@@ -152,6 +156,8 @@ form label {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family:'Cherry Bomb One', cursive;
+  font-size: 1.5rem;
 }
 .form-grid{
     display: grid;
@@ -166,7 +172,7 @@ form .input {
     border-radius: 10px;
     padding: 1rem;
     color: var(--text-color);
-    border: #0057D8 3px solid;
+    border: #df0ef1 3px solid;
     outline: none;
 }
 form .asunto{
@@ -175,7 +181,7 @@ form .asunto{
     padding: 1rem;
     background-color: transparent;
     color: var(--text-color);
-    border: #0057D8 3px solid;
+    border: #df0ef1 3px solid;
     outline: none;
 }
 form textarea{
@@ -185,10 +191,20 @@ form textarea{
     height: 200px;
     background-color: transparent;
     color: var(--text-color);
-    border: #0057D8 3px solid;
+    border: #df0ef1 3px solid;
     outline: none;
 
 }
+form .input::placeholder{
+  color: white;
+}
+form .asunto::placeholder{
+  color: white;
+}
+form textarea::placeholder{
+  color: white;
+} 
+
 .boton-one{ 
     text-align: end;
     color: var(--text-color);
@@ -197,7 +213,7 @@ form textarea{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 1rem 4rem;
   border-radius: 30px;
-  background-color: #0057D8;
+  background: linear-gradient(to right, #2196f3, #7f00ff);
   color: rgb(255, 255, 255);
   font-size: 1rem;
   margin-top: 7rem;
@@ -207,7 +223,6 @@ form textarea{
 
 /*! Informacion de contacto */
 .info-contactoB{
-  background-color: #f5f7fa;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
@@ -216,38 +231,36 @@ form textarea{
     padding: 0.5rem;
     font-size: 1.5rem;
     font-family: 'Lobster', cursive;
-    color: #0057D8;
+    color: #ff6f00;
     border-radius: 15px;
     text-align: center;
     width: max-content;
     margin: 0 auto;
 }
 .info-contactoB .parrafos{ 
-    font-size: 2rem;
-    color: var(--text-parrafos);
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
-    font-family: 'Caveat', cursive;
 }
 
 .container-dire{
   padding: 1rem;
-  border-radius: 10px;
-  background-color: #f5f7fa;
+  box-shadow: #2196f3 0px 0px 12px 0px;
+
 }
 .info-contactoB h4 {
     max-width: max-content;
     font-size: 1.3rem;
-    font-family: cursive;
-    font-weight: 900;
-    color: #0057D8;
-    border-bottom: #0057D8 2px solid;
+    font-weight: 700;
+    color: #2196f3;
+    border-bottom: #2196f3 2px solid;
 }
 .info-contactoB p{
-    font-size: 1.5rem;
-    color: var(--text-parrafos);
+    font-size: 1rem;
     margin: 0.3rem;
-    color: rgba(0, 0, 0, 0.842);
-    font-family: 'Caveat', cursive;
+    color: white;
 }
 
 /*! redes sociales */
@@ -259,10 +272,11 @@ form textarea{
 
 .container-redes-sociales .parrafo-redes{
     margin: 0.5rem 0;
-    font-size: 1.5rem;
-    color: var(--text-parrafos);
+    font-size: 1.3rem;
+    color: white;
     font-weight: 100;
     text-align: center;
+    font-family: 'Nunito', sans-serif;
 }
 .redes{
     display: flex;
@@ -270,10 +284,12 @@ form textarea{
     align-items: center;
     border-radius: 10px;
     padding: 0;
+    box-shadow: #2196f3 0px 0px 12px 0px;
+    padding: 1rem;
 }
 .redes i {
     font-size: 2rem;
-    color: #333;
+    color: #ffffff;
     transform: scale(1);
     transition: transform 0.3s opacity 0.3s;
 }
@@ -336,11 +352,12 @@ form textarea{
 }
 
 .parrafo-pregunta{
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    margin: 0.8rem 0;
+    font-size: 1.3rem;
     font-weight: 100;
     text-align: center;
-    color: var(--text-parrafos) !important;
+    color: white !important;
+    font-family: 'Nunito', sans-serif;
 }
 .faq-header {
   display: flex;
@@ -349,16 +366,16 @@ form textarea{
   cursor: pointer;
 }
 .card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  box-shadow: #2196f3 0px 0px 8px 0px;
   margin: 0.5rem 0;
 }
 
 .card div h5 {
-  font-size: 1rem;
-  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  padding: 1rem 0;
   margin: 0;
-  color: var(--text-color);
+  color: #2196f3;
+  font-family: 'Cherry Bomb One', cursive;
 }
 .boton-mas {
   background: none;
@@ -369,9 +386,11 @@ form textarea{
   margin-right: 1rem;
 }
 .faq-content p{
-    font-size: 1.5rem;
-    color: var(--text-parrafos);
+    font-size: 1rem;
+    color: white;
     margin: 0.5rem 0;
+    font-weight: 100;
+    text-align: center;
 }
 
 
@@ -383,29 +402,30 @@ form textarea{
     margin-top: 7rem;
 }
 .ubicacion-title h2{
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 5rem);
     padding: 1rem 0;
     margin: 1rem;
-    border-left: #0057D8 8px solid;
-    color: rgb(17, 17, 17);
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
+    color: rgb(253, 253, 253);
     padding-left: 1rem;
     font-family: 'Underdog', cursive;
     font-weight: 900;
+    text-align: center;
+}
+.ubicacion-title h2 span{
+  color: #00c853;
+  font-family: 'Cherry Bomb One', cursive;
 }
 .ubicacion-title p{
-    font-size: 2rem;
-    color: var(--text-parrafos);
+    font-size: 1.5rem;
+    color: white;
     margin: 1rem;
     margin-top: 2rem;
-    font-family: 'Cavet', cursive;
+    text-align: center;
 }
 .mapa-info-container{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    color: var(--text-color);
     border-radius: 20px;
     max-width: 1400px;
     margin: 0 auto;
@@ -415,7 +435,7 @@ form textarea{
     width: 100%w;
     padding: 1rem 0.5rem;
     font-size: 1.5rem;
-    background-color: #0057D8;
+    box-shadow: #7f00ff 0px 0px 12px 0px;
 }
 .mapa-info-container div iframe{
     width: 100%;
@@ -427,64 +447,53 @@ form textarea{
 /*! costado de mapa */
 .info-cos-mapa{
   padding: 1rem;
-  border-radius: 10px;
-  background-color: #f5f7fa;
-  
 }
 
 .info-cos-mapa div h3{
-    padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Lobster', cursive;
-    color: #0057D8;
-    border-radius: 15px;
+    color: #7f00ff;
     text-align: center;
-    width: max-content;
     margin: 0 auto;
 }
 .info-cos-mapa div p{
-    font-size: 1.5rem;
-    color: var(--text-parrafos);
+    font-size: 1rem;
+    color: white;
     margin: 0.3rem;
-    color: rgba(0, 0, 0, 0.842);
-    font-family: 'Caveat', cursive;
 }
 .info-cos-mapa .comop {
-    font-size: 2rem;
-    color: var(--text-parrafos);
+    font-size: 1rem;
+    color: white;
     margin: 1rem 0 ;
     text-align: center;
-    font-family: 'Caveat', cursive;
 }
 .inf-ubi{
   padding: 1rem;
-  border-radius: 10px;
+  box-shadow: #7f00ff 0px 0px 12px 0px;
 }
 .info-cos-mapa h4 {
     max-width: max-content;
     font-size: 1.3rem;
-    font-family: cursive;
     font-weight: 900;
-    color: #0057D8;
+    color: #7f00ff;
     border-bottom: white 2px solid;
-    border-bottom: #0057D8 2px solid;
+    border-bottom: #7f00ff 2px solid;
 }
 .arrow {
     font-size: 24px;
-    color: #000000;
+    color: #ffffff;
     padding: 0 5px;
     transition: transform 0.3s ease;
 }
 .btn-mapa {
-    margin-top: 3rem;
-    width: 80%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 1rem 4rem;
-    border-radius: 30px;
-    background-color: #0057D8;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    font-weight: 900;
+  margin-top: 1rem;
+  width: 80%;
+  padding: 1rem 4rem;
+  border-radius: 30px;
+  background: linear-gradient(to right, #2196f3, #7f00ff);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 900;
 }
 .co-btn{
   text-align: center;
