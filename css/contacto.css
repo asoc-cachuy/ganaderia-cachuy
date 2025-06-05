@@ -107,7 +107,7 @@
     font-weight: 900;
 }
 .textoB-contacto h2 span{
-    color: #00c853;
+    color: #2196f3;
     font-family:'Cherry Bomb One', cursive;
     font-size: 5rem;
 }
@@ -133,7 +133,7 @@
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
     border-radius: 10px;
-    color: #00c853;
+    color: #2196f3;
     text-align: center;
     margin: 0 auto;
 }
@@ -142,7 +142,7 @@
 form {
   margin-top: 3rem;
   padding: 1rem;
-  box-shadow: #df0ef1 0px 0px 12px 0px;
+  box-shadow: #ec09bb 0px 0px 12px 0px;
   color: rgb(255, 255, 255);
 
 }
@@ -172,7 +172,7 @@ form .input {
     border-radius: 10px;
     padding: 1rem;
     color: var(--text-color);
-    border: #df0ef1 3px solid;
+    border: #ec09bb 3px solid;
     outline: none;
 }
 form .asunto{
@@ -181,7 +181,7 @@ form .asunto{
     padding: 1rem;
     background-color: transparent;
     color: var(--text-color);
-    border: #df0ef1 3px solid;
+    border: #ec09bb 3px solid;
     outline: none;
 }
 form textarea{
@@ -191,7 +191,7 @@ form textarea{
     height: 200px;
     background-color: transparent;
     color: var(--text-color);
-    border: #df0ef1 3px solid;
+    border: #ec09bb 3px solid;
     outline: none;
 
 }
@@ -231,7 +231,7 @@ form textarea::placeholder{
     padding: 0.5rem;
     font-size: 1.5rem;
     font-family: 'Lobster', cursive;
-    color: #ff6f00;
+    color: #2196f3;
     border-radius: 15px;
     text-align: center;
     width: max-content;
@@ -412,7 +412,7 @@ form textarea::placeholder{
     text-align: center;
 }
 .ubicacion-title h2 span{
-  color: #00c853;
+  color: #2196f3;
   font-family: 'Cherry Bomb One', cursive;
 }
 .ubicacion-title p{
@@ -435,7 +435,7 @@ form textarea::placeholder{
     width: 100%w;
     padding: 1rem 0.5rem;
     font-size: 1.5rem;
-    box-shadow: #7f00ff 0px 0px 12px 0px;
+    box-shadow: #2196f3 0px 0px 12px 0px;
 }
 .mapa-info-container div iframe{
     width: 100%;
@@ -452,7 +452,7 @@ form textarea::placeholder{
 .info-cos-mapa div h3{
     font-size: 2rem;
     font-family: 'Lobster', cursive;
-    color: #7f00ff;
+    color: #2196f3;
     text-align: center;
     margin: 0 auto;
 }
@@ -469,15 +469,13 @@ form textarea::placeholder{
 }
 .inf-ubi{
   padding: 1rem;
-  box-shadow: #7f00ff 0px 0px 12px 0px;
+  box-shadow: #2196f3 0px 0px 12px 0px;
 }
 .info-cos-mapa h4 {
     max-width: max-content;
     font-size: 1.3rem;
     font-weight: 900;
-    color: #7f00ff;
-    border-bottom: white 2px solid;
-    border-bottom: #7f00ff 2px solid;
+    color: #2196f3;
 }
 .arrow {
     font-size: 24px;

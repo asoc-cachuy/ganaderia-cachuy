@@ -110,7 +110,7 @@
     text-align: center;
 }
 .contenedor-h2 h2 span{
-    color: #00c853;
+    color: #2196f3;
     font-family:'Cherry Bomb One', cursive;
     font-size: 5rem;
 }
@@ -129,18 +129,51 @@
   object-fit: cover;
   border-radius: 20px;
 }
+
 .text-column {
-  padding: 1rem;
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: #7f00ff 0px 0px 15px 0px;
+  transition: color 1s ease;
+  margin: 0.5rem;
 }
+
+
+.text-column::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200%; /* Para que pueda cubrir todo el card al subir */
+  background-color: #7f00ff;
+  border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+  transform: translateY(100%); /* Posición inicial como acordamos */
+  transition: transform 1s ease;
+  z-index: -1;
+}
+
+/* Hover: el arco sube y cubre el card */
+.text-column:hover::after {
+  transform: translateY(0); /* Sube y cubre el card */
+}
+.text-column:hover h3{
+  color: white; /* O el color que quieras cuando se tape */
+}
+
+
 .text-column h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: #ff6f00;
+  color: #7f00ff;
   text-align: center;
 }
 .text-column hr{
-  color: #ff6f00;
-  background-color:#ff6f00;
+  color: #7f00ff;
+  background-color:#7f00ff;
   height: 5px;
   margin-bottom: 1rem;
 }
@@ -159,6 +192,11 @@
     height: auto;
   }
   
+}
+@media (max-width: 768px) {
+  .text-column::after {
+    display: none;
+  }
 }
 
 
@@ -182,7 +220,7 @@
   text-align: center;
 }
 .section-2 h2 span{
-  color: #00c853;
+  color: #2196f3;
   font-family:'Cherry Bomb One', cursive;
 }
 .section-2 p{
@@ -205,15 +243,48 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+.espera {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: #ec09bb 0px 0px 15px 0px;
+  transition: color 1s ease;
+  margin: 0.5rem;
+}
+
+.espera::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200%; /* Para que pueda cubrir todo el card al subir */
+  background-color: #ec09bb;
+  border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+  transform: translateY(100%); /* Posición inicial como acordamos */
+  transition: transform 1s ease;
+  z-index: -1;
+}
+
+/* Hover: el arco sube y cubre el card */
+.espera:hover::after {
+  transform: translateY(0); /* Sube y cubre el card */
+}
+.espera:hover h3{
+  color: white; /* O el color que quieras cuando se tape */
+}
+
 .text-content h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: #7f00ff;
+  color: #ec09bb;
   text-align: center;
 }
 .text-content hr{
-  color: #7f00ff;
-  background-color:#7f00ff;
+  color: #ec09bb;
+  background-color:#ec09bb;
   height: 5px;
   margin: 1rem;
 }
@@ -230,18 +301,6 @@
   position: relative;
   margin: 0 auto; /* Sin espacio entre ellas */
 }
-
-.image-wrapper {
-  width: 230px;
-  border-radius: 30px;
-  box-shadow: 0 0 20px rgba(0, 255, 208, 0.2);
-  position: relative;
-}
-.image-wrapper img {
-  width: 300px;
-  display: block;
-  object-fit: cover;
-}
 /* Imagen inferior */
 .bottom-left {
   margin-top: 70px;
@@ -256,7 +315,7 @@
 
 .center img{
   border-radius: 20px;
-  border: #7f00ff 5px solid;
+  border: #ec09bb 5px solid;
 }
 
 .right {
@@ -264,7 +323,37 @@
   left: 180px;
   z-index: 1;
 }
+.ope {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: #2196f3 0px 0px 15px 0px;
+  transition: color 1s ease;
+  margin: 0.5rem;
+}
+.ope::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200%; /* Para que pueda cubrir todo el card al subir */
+  background-color: #2196f3;
+  border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+  transform: translateY(100%); /* Posición inicial como acordamos */
+  transition: transform 1s ease;
+  z-index: -1;
+}
 
+/* Hover: el arco sube y cubre el card */
+.ope:hover::after {
+  transform: translateY(0); /* Sube y cubre el card */
+}
+.ope:hover h3{
+  color: white; /* O el color que quieras cuando se tape */
+}
 
 .ope h3 {
   color: #2196f3;
@@ -344,9 +433,6 @@
 .containerr {
   max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
 }
 
 .images {
@@ -375,12 +461,12 @@
 .text-contente h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: #00c853;
+  color: #2196f3;
   text-align: center;
 }
 .text-contente hr{
-  color: #00c853;
-  background-color:#00c853;
+  color: #2196f3;
+  background-color:#2196f3;
   height: 5px;
   margin: 1rem;
 }
@@ -415,13 +501,13 @@
 .valores-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem;
   border-radius: 5px;
 }
 
 .valor-item {
+  position: relative;
   border: 2px solid;
-  padding: 2rem 1.5rem;
+  padding: 1rem;
   width: 100%;
   max-width: 100%;
   height: 270px;
@@ -429,9 +515,64 @@
   flex-direction: column;
   transition: transform 0.3s ease;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
+  overflow: hidden;
 }
+.swiper-slide.valor-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 160%;
+  height: 70%;
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.2; /* Puedes ajustar la opacidad o quitarla */
+  pointer-events: none; /* No interfiere con clics */
+  z-index: 9;
+}
+.swiper-slide.valor-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 160%;
+  height: 70%;
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+.gra-purple{
+  border: 2px solid #7f00ff;
+  box-shadow: 0px 0px 12px 0 #7f00ff;
+}
+.gra-purple::after{
+  background-color: #7f00ff;
+}
+.gra-purple::before{
+  background-color: #7f00ff;
+}
+.gra-rosa{
+  border: 2px solid #ec09bb;
+  box-shadow: 0px 0px 12px 0 #ec09bb;
+}
+.gra-rosa::after{
+  background-color: #ec09bb;
+}
+.gra-rosa::before{
+  background-color: #ec09bb;
+}
+.gra-cele{
+  border: 2px solid #2196f3;
+  box-shadow: 0px 0px 12px 0 #2196f3;
+}
+.gra-cele::after{
+  background-color: #2196f3;
+}
+.gra-cele::before{
+  background-color: #2196f3;
+}
+
 .icono{
   font-size: 2rem;
   margin-bottom: 0,1rem;
@@ -451,11 +592,11 @@
 }
 
 .valor-h3.green {
-color: #00c853;
+color: #2196f3;
 }
 
 .valor-h3.orange {
-color: #ff6f00;
+color: #ec09bb;
 }
 
 .valor-h3.purple {
@@ -467,34 +608,11 @@ color: #2196f3;
 }
 
 .valor-h3.pink {
-color: #ec09bb;
+color: #7f00ff;
 }
 
 .valor-h3.mora {
-color: #df0ef1;
-}
-
-.valor-hr.green {
-  background-color: #00c853;
-}
-
-.valor-hr.orange {
-  background-color: #ff6f00;
-}
-
-.valor-hr.purple {
-  background-color: #7f00ff;
-}
-
-.valor-hr.blue {
-  background-color: #2196f3;
-}
-.valor-hr.pink {
-  background-color: #ec09bb;
-}
-
-.valor-hr.mora {
-  background-color: #df0ef1;
+color: #ec09bb;
 }
 
 .valor-p {
@@ -528,24 +646,7 @@ color: #df0ef1;
 }
 
 /* Reutiliza estilos de gradientes para el borde */
-.gradient-green {
-  border-image: linear-gradient(to bottom right, #00c853, #ffffffc9) 1;
-}
-.gradient-orange {
-  border-image: linear-gradient(to bottom right, #ff6f00, #ffffff) 1;
-}
-.gradient-purple {
-  border-image: linear-gradient(to bottom right, #7f00ff, #ffffff) 1;
-}
-.gradient-blue {
-  border-image: linear-gradient(to bottom right, #2196f3, #ffffff) 1;
-}
-.gradient-pink {
-  border-image: linear-gradient(to bottom right, #ec09bb, #ffffff) 1;
-}
-.gradient-mora {
-  border-image: linear-gradient(to bottom right, #df0ef1, #ffffff) 1;
-}
+
 
 @media screen and (max-width: 360px) {
   .valores-container {
@@ -580,7 +681,7 @@ color: #df0ef1;
   text-align: center;
 }
 .modelo-negocio h2 span{
-  color: #00c853;
+  color: #2196f3;
   font-family:'Cherry Bomb One', cursive;
 }
 
@@ -605,18 +706,57 @@ color: #df0ef1;
   border-radius: 5px;
 }
 
+/**/
 .produccion-item {
-  border: 2px solid transparent;
-  padding: 1rem 1rem;
+  position: relative;
+  border: 2px solid;
+  padding: 1rem ;
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: 350px;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
-  min-height: 300px;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
+  overflow: hidden;
+}
+.swiper-slide.produccion-item::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 160%;
+  height: 50%;
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.2; /* Puedes ajustar la opacidad o quitarla */
+  pointer-events: none; /* No interfiere con clics */
+  z-index: 9;
+}
+.swiper-slide.produccion-item::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 160%;
+  height: 50%;
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.gra-purple{
+  border: 2px solid #7f00ff;
+  box-shadow: 0px 0px 12px 0 #7f00ff;
+}
+.gra-cele{
+  border: 2px solid #2196f3;
+  box-shadow: 0px 0px 12px 0 #2196f3;
+}
+.gra-rosa{
+  border: 2px solid #ec09bb;
+  box-shadow: 0px 0px 12px 0 #ec09bb;
 }
 .produccion-item .icono{
   font-size: 2.5rem;
@@ -639,31 +779,6 @@ color: #df0ef1;
 }
 
 /* Degradados personalizados por tarjeta */
-.gradient-verde {
-  border-image: linear-gradient(to bottom right, #00c853, #ffffff) 1;
-  color: #00c853;
-}
-.gradient-naranja {
-  border-image: linear-gradient(to bottom right, #ff6f00, #ffffff) 1;
-  color: #ff6f00;
-}
-.gradient-violeta {
-  border-image: linear-gradient(to bottom right, #7f00ff, #ffffff) 1;
-  color: #7f00ff;
-}
-.gradient-rojo {
-  border-image: linear-gradient(to bottom right, #2196f3, #ffffff) 1;
-  color: #2196f3;
-}
-.gradient-azul {
-  border-image: linear-gradient(to bottom right, #ec09bb, #ffffff) 1;
-  color: #ec09bb;
-}
-.gradient-amarillo {
-  border-image: linear-gradient(to bottom right, #df0ef1, #ffffff) 1;
-  color: #df0ef1;
-}
-
 /* Swiper pagination estilo */
 .inicio-produccion .swiper-pagination {
   position: relative;
@@ -703,7 +818,7 @@ color: #df0ef1;
   text-align: center;
 }
 .estadisticas-h2 span{
-  color: #00c853;
+  color: #2196f3;
   font-family:'Cherry Bomb One', cursive;
 }
 .estadisticas{
@@ -715,29 +830,71 @@ color: #df0ef1;
   text-align: center;
 }
 .estadisticas-div {
+  position: relative;
   padding: 1rem;
-  margin-bottom: 1rem;
-
+  border-radius: 12px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 1s ease;
+  margin: 0.5rem;
 }
+
+.estadisticas-div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200%; /* Para que pueda cubrir todo el card al subir */
+  border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+  transform: translateY(100%); /* Posición inicial como acordamos */
+  transition: transform 1s ease;
+  z-index: -1;
+}
+
+/* Hover: el arco sube y cubre el card */
+.estadisticas-div:hover::after {
+  transform: translateY(0); /* Sube y cubre el card */
+}
+.estadisticas-div:hover h3{
+  color: white; /* O el color que quieras cuando se tape */
+}
+
+
+.verde::after{
+  background-color: #2196f3;
+}
+.naranja::after{
+  background-color: #7f00ff;
+}
+.violeta::after{
+  background-color: #ec09bb;
+}
+.moras::after{
+  background-color: #2196f3;
+}
+
+
 .verde{
-  box-shadow: #00c853 0px 0px 12px 0px;
+  box-shadow: #2196f3 0px 0px 12px 0px;
 }
 .naranja{
-  box-shadow: #ff6f00 0px 0px 12px 0px;
+  box-shadow: #7f00ff 0px 0px 12px 0px;
 }
 .violeta{
   box-shadow: #ec09bb 0px 0px 12px 0px;
 }
 .moras{
-  box-shadow: #df0ef1 0px 0px 12px 0px;
+  box-shadow: #2196f3 0px 0px 12px 0px;
 }
+
 .e-verde{
-  color: #00c853;
+  color: #2196f3;
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;
 }
 .e-naranja{
-  color: #ff6f00;
+  color: #7f00ff;
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;
 }
@@ -747,7 +904,7 @@ color: #df0ef1;
   font-size: 2rem;
 }
 .e-moras{
-  color: #df0ef1;
+  color: #2196f3;
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;  
 }
@@ -779,7 +936,7 @@ color: #df0ef1;
     text-align: center;
 }
 .impulsamos-texto h2 span{
-    color: #00c853;
+    color: #2196f3;
     font-family:'Cherry Bomb One', cursive;
 }
 .impulsamos-texto p{

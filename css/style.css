@@ -4,5 +4,5 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+background: linear-gradient(270deg, #0a0f6f 0%,#000000 15%, #000000 35%, #000000 65%, #0a0f6f 100%);
 }
