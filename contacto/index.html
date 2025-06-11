@@ -13,6 +13,8 @@
 	<meta name="author" content="Asociación Ganadera Cachuy" />
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
@@ -21,6 +23,7 @@
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <title>Contacto - Asociación Ganadera Cachuy</title>
 </head>
 <body>
@@ -59,10 +62,13 @@
                 <h1 class="titulo-contacto ">
                     <span>C</span><span>O</span><span>N</span><span>T</span><span>Á</span><span>C</span><span>T</span><span>A</span><span>N</span><span>O</span><span>S</span>
                 </h1>
-                <p>
-                    Estamos aqui para responder tus preguntas y brindarte
-                    la información que necesitas
-                </p>
+                <div>
+                    <p>
+                        Estamos aqui para responder tus preguntas y brindarte
+                        la información que necesitas
+                    </p> 
+                </div>
+                
             </div>
         </section>
     </section>
@@ -71,8 +77,8 @@
         <section class="container-form-info " >
             
             <div class="container-form">
-                <div class="textoB-contacto">
-                    <h2 class=""> ¿Tienes alguna <span>consulta</span>?</h2>
+                <div class="textoB-contacto" data-aos="zoom-in">
+                    <h2 class=""><span>Contáctanos</span></h2>
                     <p class="">
                         Completa el formulario y nos pondremos en contacto contigo
                         lo antes posible. Los campos marcados con (*) son obligatorios.
@@ -81,11 +87,10 @@
                 
                 <div class="textoC-contacto">
                     <h3 class="">Formulario de Contacto</h3>
-                   
                 </div>
 
                 <form action="">
-                    <div class="form-grid staggered-item">
+                    <div class="form-grid staggered-item" data-aos="zoom-in">
                         <div class="">
                             <label for="nombre">Nombre Completo *</label>
                             <input class="input staggered-item" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" >
@@ -104,26 +109,26 @@
                         </div>
                     </div>
                     
-                    <div class="">
+                    <div class="" data-aos="zoom-in">
                         <label for="asunto">Asunto *</label>
                         <input class="asunto staggered-item" id="asunto" name="asunto"  placeholder="Escriba el asunto"></input>
                     </div>
                     <div class="">
                         <label for="mensaje">Mensaje *</label>
                         <textarea class="staggered-item" id="mensaje" name="mensaje" placeholder="Escriba su mensaje"></textarea>
-                    </div>
+                    </div data-aos="zoom-in">
                     <div class="boton-one block">
                         <button class="btn-ones staggered-item" value="Enviar">Enviar Mensaje</button>
                     </div>
                 </form>
             </div>
 
-            <div class="info-contactoB">
+            <div class="info-contactoB" data-aos="zoom-in">
                     <h3 class="">Información de Contacto</h3>
                     <p class="parrafos">
                         Contáctanos directamente a través de estos medios
                     </p>
-                    <div class="container-dire">
+                    <div class="container-dire" data-aos="zoom-in">
                         <div class="">
                             <h4>Direccion</h4>
                             <p class="pp">
@@ -157,7 +162,7 @@
                     </div>
                 
 
-                    <div class="container-redes-sociales">
+                    <div class="container-redes-sociales" data-aos="zoom-in">
                         <h3 class="">Redes Sociales</h3>
                         <p class="parrafo-redes">
                             Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades
@@ -171,12 +176,12 @@
                             
                     </div>
 
-                    <div class="preguntas-frecuentes">
+                    <div class="preguntas-frecuentes" data-aos="zoom-in">
                         <h3 class="">Preguntas Frecuentes</h3>
                         <p class="parrafo-pregunta">
                             Respuestas a las preguntas más comunes sobre nuestros servicios y productos
                         </p>
-                        <div class="preguntas-frecuentess">
+                        <div class="preguntas-frecuentess" data-aos="zoom-in">
                             <div class="card">
                                 <div class="faq-header" onclick="toggleFaq(this)">
                                     <h5>¿Cómo puedo comprar ganado? </h5>
@@ -241,54 +246,125 @@
                             </div>
                         </div>
                     </div>
-
             </section>
-            <section class="con-ubi">
-                <div class="ubicacion-title">
-                    <h2 class="">Nuestra <span>localización</span></h2>
-                    <p>Estamos ubicados en San Lorenzo de Quinti, un hermoso distrito de la provincia de Huarochirí, Lima</p>
-                </div>
-
-                <section class="mapa-info-container">
-                    <div class="mapa">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.1234567890123!2d-77.12345678901234!3d-12.345678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1234567890abcdef%3A0x1234567890abcdef!2sSan%20Lorenzo%20de%20Quinti%2C%20Huarochir%C3%AD%2C%20Lima%2C%20Per%C3%BA!5e0!3m2!1ses-419!2sus!4v12345678901234" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-
-                    <div class="info-cos-mapa">
-                        <div>
-                            <h3 class="">¿Cómo llegar?</h3>
-                            <p class="comop">
-                                información sobre nuestra ubicación
-                            </p> 
-                        </div>
-                        
-                        <div class="inf-ubi">
-                            <h4>
-                                Ganadería Asunción de Cachuy
-                            </h4>
-                            <p>San Lorenzo de Quinti, Huarochirí-Lima</p>
-                            <h4>Indicaciones</h4>
-                            <p><span class="arrow">&rsaquo;</span> Desde Lima, tomar la Carretera Central hacia Huarochirí</p>
-                            <p><span class="arrow">&rsaquo;</span> Desviar en el km 80 hacia San Lorenzo de Quinti</p>
-                            <p><span class="arrow">&rsaquo;</span> Buscar el letrero de "Ganadería Asunción de Cachuy" a la entrada del pueblo</p>
-                            
-                        </div>
-                        <div class="co-btn">
-                            <button class="btn-one btn-mapa ">Abrir en Google Maps</button>
-                        </div>
-                    </div>
-                </section>
-            <section>
         </section>
+    
+            <section class="bgc-general">
+                <section class="con-ubi">
+                    <div class="ubicacion-title" data-aos="zoom-in">
+                        <h2 class=""><span>Nuestra localización</span></h2>
+                        <p>Estamos ubicados en San Lorenzo de Quinti, un hermoso distrito de la provincia de Huarochirí, Lima</p>
+                    </div>
 
-        <footer class="footer">
-           
-        </footer>
+                    <section class="mapa-info-container" data-aos="zoom-in">
+                        <div class="mapa">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.1234567890123!2d-77.12345678901234!3d-12.345678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1234567890abcdef%3A0x1234567890abcdef!2sSan%20Lorenzo%20de%20Quinti%2C%20Huarochir%C3%AD%2C%20Lima%2C%20Per%C3%BA!5e0!3m2!1ses-419!2sus!4v12345678901234" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class="info-cos-mapa">
+                            <div>
+                                <h3 class="">¿Cómo llegar?</h3>
+                                <p class="comop">
+                                    información sobre nuestra ubicación
+                                </p> 
+                            </div>
+                            
+                            <div class="inf-ubi">
+                                <h4>
+                                    Ganadería Asunción de Cachuy
+                                </h4>
+                                <p>San Lorenzo de Quinti, Huarochirí-Lima</p>
+                                <h4>Indicaciones</h4>
+                                <p><span class="arrow">&rsaquo;</span> Desde Lima, tomar la Carretera Central hacia Huarochirí</p>
+                                <p><span class="arrow">&rsaquo;</span> Desviar en el km 80 hacia San Lorenzo de Quinti</p>
+                                <p><span class="arrow">&rsaquo;</span> Buscar el letrero de "Ganadería Asunción de Cachuy" a la entrada del pueblo</p>
+                                
+                            </div>
+                            <div class="co-btn">
+                                <button class="btn-one btn-mapa ">Abrir en Google Maps</button>
+                            </div>
+                        </div>
+                    </section>
+                <section>
+            </section>
+ 
+       </section>
+</section> 
+
+<footer class="footer">
+        <div class="footer-container">
+            <!-- Logo y descripción -->
+            <div class="footer-col">
+            <h3 class="footer-logo">Asociación Ganadera Asunción de Cachuy</h3>
+            <p>Comprometidos con la crianza responsable de ganado vacuno y el desarrollo económico de nuestras familias productoras.</p>
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Ganado en venta</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+                <li><strong>📍 Dirección:</strong> Comunidad Campesina de Cachuy, Yauyos, Lima – Perú</li>
+                <li><strong>📞 Teléfono:</strong> +51 987 654 321</li>
+                <li><strong>✉️ Email:</strong> ganaderoscachuy@gmail.com</li>
+                <li><a href="https://wa.me/51987654321" target="_blank">💬 Escríbenos por WhatsApp</a></li>
+            </ul>
+            </div>
+
+            <!-- Apoyo institucional -->
+            <div class="footer-col">
+              <h4>Apoyan</h4>
+              <ul>
+                  <li>AgroRural</li>
+                  <li>FIDA</li>
+                  <li>Avanzar Rural</li>
+                  <li>Ministerio de Desarrollo Agrario y Riego</li>
+              </ul>
+            </div>
+            
+            <div class="footer-social">
+              <h4>Síguenos en redes</h4>
+              <div class="social-links">
+                <a href="https://facebook.com" target="_blank" class="facebook" aria-label="Facebook">
+                  <img src="icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="instagram" aria-label="Instagram">
+                  <img src="icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://youtube.com" target="_blank" class="youtube" aria-label="YouTube">
+                  <img src="icons/youtube.svg" alt="YouTube">
+                </a>
+                <a href="https://wa.me/51987654321" target="_blank" class="whatsapp" aria-label="WhatsApp">
+                  <img src="icons/whatsapp.svg" alt="WhatsApp">
+                </a>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+      
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../js/contacto.js"></script>
     <script src="../js/pulso.js"></script>
     <script src="../js/progress.js"></script>
     <script src="../js/nav.js"></script>
-    <script src="../js/menu.js"></script>   
+    <script src="../js/menu.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 500 });
+    </script>
 </body>
 </html>

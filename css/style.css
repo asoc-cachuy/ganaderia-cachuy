@@ -4,5 +4,10 @@
     box-sizing: border-box;
 }
 body{
-background: linear-gradient(270deg, #0a0f6f 0%,#000000 15%, #000000 35%, #000000 65%, #0a0f6f 100%);
+
+    background: white;
+}
+.bgc-general{
+  background-color: #ddd7d760;
+  padding-bottom: 2rem;
 }

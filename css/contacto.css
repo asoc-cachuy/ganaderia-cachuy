@@ -1,9 +1,14 @@
-:root {
-  --bg-color: #ffffff;
+  :root {
+  --titulo-span:  #2a5c2a;
+  --text-parrafo-general: rgba(14, 0, 0, 0.664);
+  --color-h3: #ffb703;
+  --box-shadow-color:#2196f3;
+  --border:#2196f3;
+  --title-h2: rgb(0, 0, 0);
+
   --bg-color-dark: #43283a;
   --button-color-dark: #2c1825af;
   --text-color: #000000;
-  --text-parrafos: rgb(39, 39, 39);
   --border-bottom: #928f8f98;
 }
 /*! imagen y su texto*/
@@ -12,15 +17,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+h2 span {
+  text-transform: uppercase;
+}
 .inicio-contacto-container {
   position: relative;
   height: 60vh;
   width: 100%;
 }
 .seccion-contacto {
-  background-image: url('../images/contacto-perfil.jpg');
+  position: relative;
+  background-image: linear-gradient(rgba(9, 6, 221, 0.4), rgba(7, 22, 236, 0.4)),
+  url('../images/contacto-perfil.jpg');
   background-size: cover;
   background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -32,7 +43,7 @@
 .texto-contacto h1 {
   font-size: clamp(4rem, 6vw, 7rem);
   margin: 0 0 0 1rem;
-  color: white;
+  color: var(--titulo-span);
   font-family:'Cherry Bomb One', cursive;
 }
 
@@ -44,7 +55,7 @@
 }
 .texto-contacto p {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 @keyframes pulseBounceGlow {
   0% {
@@ -78,6 +89,7 @@
 .titulo-contacto span:nth-child(11) { animation-delay: 2s; }
 
 /*! cuepo de contacto  */
+
 .contacto-con- {
     max-width: 1400px;
     margin: 0 auto;
@@ -88,9 +100,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    color: var(--text-color);
-    border-radius: 20px ;
-
 }
 /* texto contacto info*/
 
@@ -98,58 +107,51 @@
     border-radius: 15px;
 }
 .textoB-contacto h2 {
-    font-size: clamp(1.3rem, 4vw, 4rem);
+    font-size: clamp(1.5rem, 4vw, 4rem);
     padding: 1rem 0;
     margin: 1rem;
-    color: rgb(255, 255, 255);
+    color: var(--title-h2);
     padding-left: 1rem;
     font-family: 'Underdog', cursive;
     font-weight: 900;
 }
 .textoB-contacto h2 span{
-    color: #2196f3;
+    color: var(--titulo-span);
     font-family:'Cherry Bomb One', cursive;
-    font-size: 5rem;
 }
 .textoB-contacto p{
-    font-size: 1.5rem;
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
     margin: 1rem;
     margin-top: 3rem 0;
-    color: #ffffff;
+    color: var(--text-parrafo-general);
     text-align: center;
-
 }
 /*! texto header de form */
 .textoC-contacto {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 .textoC-contacto h3 {
-    min-width: 12rem;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin: 0;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-family: 'Lobster', cursive;
     border-radius: 10px;
-    color: #2196f3;
+    color: var(--color-h3);
     text-align: center;
     margin: 0 auto;
 }
 /*! Formulario */
 
 form {
-  margin-top: 3rem;
-  padding: 1rem;
-  box-shadow: #ec09bb 0px 0px 12px 0px;
-  color: rgb(255, 255, 255);
-
+  margin-top: 1rem;
+  padding: 0.5rem;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+  color: var(--border);
 }
 
 form div {
-  margin-bottom: 15px;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 form label {
@@ -157,7 +159,8 @@ form label {
   font-weight: bold;
   margin-bottom: 10px;
   font-family:'Cherry Bomb One', cursive;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  color: var(--bg-color-dark);
 }
 .form-grid{
     display: grid;
@@ -168,20 +171,18 @@ form label {
 
 form .input {
     width: 100%;
-    background-color: transparent;
     border-radius: 10px;
     padding: 1rem;
     color: var(--text-color);
-    border: #ec09bb 3px solid;
+    border: rgba(0, 0, 0, 0.3) 2px solid;
     outline: none;
 }
 form .asunto{
     width: 100%;
     border-radius: 10px;
     padding: 1rem;
-    background-color: transparent;
     color: var(--text-color);
-    border: #ec09bb 3px solid;
+    border: rgba(0, 0, 0, 0.3) 2px solid;
     outline: none;
 }
 form textarea{
@@ -189,20 +190,18 @@ form textarea{
     border-radius: 10px;
     padding: 1rem;
     height: 200px;
-    background-color: transparent;
     color: var(--text-color);
-    border: #ec09bb 3px solid;
+    border: rgba(0, 0, 0, 0.3) 2px solid;
     outline: none;
-
 }
 form .input::placeholder{
-  color: white;
+  color: var(--text-color);
 }
 form .asunto::placeholder{
-  color: white;
+  color: var(--text-color);
 }
 form textarea::placeholder{
-  color: white;
+  color: var(--text-color);
 } 
 
 .boton-one{ 
@@ -213,7 +212,7 @@ form textarea::placeholder{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 1rem 4rem;
   border-radius: 30px;
-  background: linear-gradient(to right, #2196f3, #7f00ff);
+  background: linear-gradient(to right, #2196f3, #90e0ef);
   color: rgb(255, 255, 255);
   font-size: 1rem;
   margin-top: 7rem;
@@ -228,39 +227,39 @@ form textarea::placeholder{
   text-align: center;
 }
 .info-contactoB h3{
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    font-family: 'Lobster', cursive;
-    color: #2196f3;
-    border-radius: 15px;
-    text-align: center;
-    width: max-content;
-    margin: 0 auto;
+  padding: 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-family: 'Lobster', cursive;
+  color: var(--color-h3);
+  border-radius: 15px;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
 }
 .info-contactoB .parrafos{ 
-    font-size: 1.5rem;
-    color: white;
-    margin: 1rem;
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
+  font-size: clamp(0.5rem, 4vw, 1rem);
+  margin: 1rem;
+  margin-top: 3rem 0;
+  color: var(--text-parrafo-general);
+  text-align: center;
 }
 
 .container-dire{
   padding: 1rem;
   box-shadow: #2196f3 0px 0px 12px 0px;
-
 }
 .info-contactoB h4 {
-    max-width: max-content;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #2196f3;
-    border-bottom: #2196f3 2px solid;
+  max-width: max-content;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family:'Cherry Bomb One', cursive;
+  font-size: clamp(1rem, 4vw, 1rem);
+  color: var(--bg-color-dark);
 }
 .info-contactoB p{
-    font-size: 1rem;
-    margin: 0.3rem;
-    color: white;
+  font-size: clamp(0.4rem, 4vw, 1rem);
+  margin: 0.3rem;
+  color: var(--text-parrafo-general);
 }
 
 /*! redes sociales */
@@ -271,12 +270,10 @@ form textarea::placeholder{
 }
 
 .container-redes-sociales .parrafo-redes{
+    font-size: clamp(0.5rem, 4vw, 1rem);
     margin: 0.5rem 0;
-    font-size: 1.3rem;
-    color: white;
     font-weight: 100;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
 }
 .redes{
     display: flex;
@@ -284,7 +281,7 @@ form textarea::placeholder{
     align-items: center;
     border-radius: 10px;
     padding: 0;
-    box-shadow: #2196f3 0px 0px 12px 0px;
+    box-shadow: var(--box-shadow-color) 0px 0px 12px 0px;
     padding: 1rem;
 }
 .redes i {
@@ -292,6 +289,7 @@ form textarea::placeholder{
     color: #ffffff;
     transform: scale(1);
     transition: transform 0.3s opacity 0.3s;
+    cursor: pointer;
 }
 
 @keyframes pulseBounceGlow {
@@ -342,13 +340,12 @@ form textarea::placeholder{
   display: none;
 }
 .preguntas-frecuentes .card div{
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .preguntas-frecuentes{
-    margin-top: 1rem;
-    transition: max-height 0.4s ease;
-    padding: 0.5rem;
-    border-radius: 10px;
+  margin-top: 1rem;
+  transition: max-height 0.4s ease;
+  padding: 0.5rem;
 }
 
 .parrafo-pregunta{
@@ -356,13 +353,10 @@ form textarea::placeholder{
     font-size: 1.3rem;
     font-weight: 100;
     text-align: center;
-    color: white !important;
-    font-family: 'Nunito', sans-serif;
 }
 .faq-header {
   display: flex;
-  justify-content:space-around ;
-  align-items: center;
+  justify-content:space-between;
   cursor: pointer;
 }
 .card {
@@ -371,26 +365,25 @@ form textarea::placeholder{
 }
 
 .card div h5 {
-  font-size: 1.1rem;
+  font-size: clamp(0.5rem, 4vw, 1.1rem);
   padding: 1rem 0;
-  margin: 0;
-  color: #2196f3;
+  color:  var(--text-parrafo-general);
   font-family: 'Cherry Bomb One', cursive;
 }
 .boton-mas {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #0057D8;
+  color: var(--text-parrafo-general);
   cursor: pointer;
   margin-right: 1rem;
 }
 .faq-content p{
-    font-size: 1rem;
-    color: white;
-    margin: 0.5rem 0;
-    font-weight: 100;
-    text-align: center;
+  font-size: 1rem;
+  color: var(--text-parrafo-general);
+  margin: 0.5rem 0;
+  font-weight: 100;
+  text-align: center;
 }
 
 
@@ -399,25 +392,25 @@ form textarea::placeholder{
 .ubicacion-title{
     max-width: 1400px;
     margin: 0 auto;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 .ubicacion-title h2{
-    font-size: clamp(2rem, 4vw, 5rem);
+    font-size: clamp(2rem, 4vw, 4rem);
     padding: 1rem 0;
     margin: 1rem;
-    color: rgb(253, 253, 253);
+    color: var(--title-h2);
     padding-left: 1rem;
     font-family: 'Underdog', cursive;
     font-weight: 900;
     text-align: center;
 }
 .ubicacion-title h2 span{
-  color: #2196f3;
+  color: var(--titulo-span);
   font-family: 'Cherry Bomb One', cursive;
 }
 .ubicacion-title p{
-    font-size: 1.5rem;
-    color: white;
+   font-size: clamp(0.5rem, 4vw, 1.5rem);
+    color: var(--text-parrafo-general);
     margin: 1rem;
     margin-top: 2rem;
     text-align: center;
@@ -435,7 +428,7 @@ form textarea::placeholder{
     width: 100%w;
     padding: 1rem 0.5rem;
     font-size: 1.5rem;
-    box-shadow: #2196f3 0px 0px 12px 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) inset 0px 0px 20px 0px;
 }
 .mapa-info-container div iframe{
     width: 100%;
@@ -450,21 +443,22 @@ form textarea::placeholder{
 }
 
 .info-cos-mapa div h3{
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 1.5rem);
     font-family: 'Lobster', cursive;
-    color: #2196f3;
+    color: var(--color-h3);
     text-align: center;
     margin: 0 auto;
 }
 .info-cos-mapa div p{
-    font-size: 1rem;
-    color: white;
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    color: var(--text-parrafo-general);
     margin: 0.3rem;
 }
 .info-cos-mapa .comop {
-    font-size: 1rem;
-    color: white;
-    margin: 1rem 0 ;
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    color: var(--text-parrafo-general);
+    margin: 1rem;
+    margin-top: 2rem;
     text-align: center;
 }
 .inf-ubi{
@@ -475,7 +469,8 @@ form textarea::placeholder{
     max-width: max-content;
     font-size: 1.3rem;
     font-weight: 900;
-    color: #2196f3;
+    color: var(--color-h3);
+    font-family: 'Cherry Bomb One', cursive;
 }
 .arrow {
     font-size: 24px;
@@ -488,10 +483,11 @@ form textarea::placeholder{
   width: 80%;
   padding: 1rem 4rem;
   border-radius: 30px;
-  background: linear-gradient(to right, #2196f3, #7f00ff);
+  background: linear-gradient(to right, #2196f3, #90e0ef);
   color: rgb(255, 255, 255);
   font-size: 1rem;
   font-weight: 900;
+  cursor: pointer;
 }
 .co-btn{
   text-align: center;
@@ -549,27 +545,62 @@ form textarea::placeholder{
 
 @media (max-width: 480px) {
 
-  .texto-contacto h1 {
-    font-size: clamp(2rem, 4vw, 4rem);
-    text-align: center;
-    margin: 0 auto;
+  .textoB-contacto{
+    margin-top: -7rem;
   }
-
+.textoB-contacto p{
+  margin: 0 0.5rem;
+  margin-top: -1rem;
+  }
   .texto-contacto p {
     margin-left: 1rem;
     font-size: 0.9rem;
     text-align: center;
   }
-
-  .btn-container {
-    flex-direction: column;
+  
+  form{
+    margin-top: 1rem;
+  }
+  form div{
+    margin-top: 0rem;
+  }
+  form .input{
+    padding: 0.5rem;
+  }
+  form .input::placeholder{
+    font-size: 0.6rem;
+  }
+  form .asunto::placeholder{
+    font-size: 0.6rem;
+  }
+  form textarea::placeholder{
+    font-size: 0.6rem;
+    height: 50px;
+  } 
+  .redes i {
+    font-size: 1.5rem;
+  }
+.preguntas-frecuentes{
+  margin: -.5rem;
+  margin: 0;
+  padding: 0;
+}
+  .card div h5 {
+    font-size: 0.95rem;
   }
 
   .btne {
     width: 100%;
     padding: 1rem;
   }
-
+  .boton-mas {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--text-parrafo-general);
+    cursor: pointer;
+    margin-right: 1rem;
+  }
   .faq-header {
     flex-direction: column;
     align-items: flex-start;
@@ -583,11 +614,15 @@ form textarea::placeholder{
   .ubicacion-title h2 {
     font-size: 1.8rem;
   }
-}
-@media (max-width: 360px) {
-  html, body {
-    overflow-x: hidden;
+  .ubicacion-title{
+    margin: 2rem;
   }
+  
+}
+
+
+
+@media (max-width: 400px) {
 
   .container-form-info {
     display: block;
@@ -599,33 +634,46 @@ form textarea::placeholder{
   .form-grid {
     grid-template-columns: 1fr !important;
   }
-
-  .textoB-contacto h2,
-  .textoC-contacto h3,
-  .info-contactoB h3,
-  .info-contactoB h4 {
-    font-size: 1.1rem;
+  .textoB-contacto{
+    margin-top: -7rem;
+  }
+.textoB-contacto p{
+  margin: 0 0.5rem;
+  margin-top: -1rem;
+  }
+  .texto-contacto p {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  form{
+    margin-top: 1rem;
+  }
+  form div{
+    margin-top: 0rem;
+  }
+  form .input{
     padding: 0.5rem;
-    margin: 0.5rem 0;
   }
-
-  .textoB-contacto p,
-  form p,
-  .faq-content p,
-  .parrafo-pregunta,
-  .container-redes-sociales .parrafo-redes {
-    font-size: 0.9rem;
+  form textarea{
+    height: 100px;
   }
-
-  form .input,
-  form .asunto,
-  form textarea {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 0.7rem;
-    box-sizing: border-box;
+  form .asunto{
+    padding: 0.5rem;
   }
-
+  form .input::placeholder{
+    font-size: 0.6rem;
+  }
+  form .asunto::placeholder{
+    font-size: 0.6rem;
+  }
+  form textarea::placeholder{
+    font-size: 0.6rem;
+  }
+  .info-contactoB{
+    padding: 0.3rem;
+  }
   .btn-ones {
     width: 100%;
     padding: 0.8rem 1rem;
@@ -635,13 +683,15 @@ form textarea::placeholder{
   }
 
   .redes {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     gap: 1rem;
+    padding: 0.5rem;
   }
 
   .redes i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .card div h5 {
