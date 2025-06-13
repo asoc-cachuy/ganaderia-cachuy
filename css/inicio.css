@@ -295,7 +295,8 @@ h2{
 
 
 .btn {
-  margin-top: 1rem;
+  position: relative;
+  margin-top: 2rem;
   background: linear-gradient(to right, #2196f3, #90e0ef);
   color: rgb(255, 255, 255);
   border: none;
@@ -357,7 +358,7 @@ h2{
   padding: 1rem;
   width: 100%;
   max-width: 100%;
-  min-height: 200px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
@@ -409,13 +410,11 @@ h2{
     transform: translateY(0);
   }
 }
-
-/* Sombra sutil en los botones al pasar el mouse */
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+.btn{
+  position: relative;
+  top: 0.5rem;
 }
+/* Sombra sutil en los botones al pasar el mouse */
 
 /*! contenido ejemplares */
 .seccion-ejemplares {
