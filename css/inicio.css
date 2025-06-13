@@ -27,7 +27,8 @@ h2{
 }
 .inicio-contacto-container {
   position: relative;
-  height: 100vh;
+  height: 100vh;  
+  margin-top: 15rem;
   width: 100%;
 }
 .seccion-contacto {
@@ -48,6 +49,7 @@ h2{
   font-family:'Cherry Bomb One', cursive;
   text-align: center;
   text-box: #000000 0px 0px 12px 0px;
+
 }
 
 .titulo-contacto span {
