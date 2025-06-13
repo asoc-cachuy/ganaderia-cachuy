@@ -1,16 +1,21 @@
+:root{
+  --font-p: 'Underdog', Times, serif;
+}
+
 .footer {
   background-color: #2a5c2a;
   color: #ffffff;
   padding: 4rem 1rem 2rem;
   font-size: 0.95rem;
+  font-family: var(--font-p);
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1700px;
   margin: 0 auto;
+  gap: 3rem;
 }
 
 .footer-logo {
@@ -24,6 +29,7 @@
   font-size: 1.1rem;
   border-bottom: 2px solid #4CAF50;
   padding-bottom: 0.5rem;
+  font-family: var(--font-p);
 }
 
 .footer-col ul {
@@ -34,11 +40,13 @@
 .footer-col ul li {
   margin-bottom: 0.5rem;
   line-height: 1.4;
+  font-family: var(--font-p);
 }
 
 .footer-col ul li a {
   color: #ffffff;
   text-decoration: none;
+  font-family: var(--font-p);
 }
 
 .footer-col ul li a:hover {
@@ -63,6 +71,7 @@
   font-size: 1.1rem;
   margin-bottom: 1rem;
   color: #fff;
+  font-family: var(--font-p);
 }
 
 .social-links {

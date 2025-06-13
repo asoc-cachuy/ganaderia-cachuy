@@ -88,39 +88,46 @@
                 <div class="textoC-contacto">
                     <h3 class="">Formulario de Contacto</h3>
                 </div>
-
-                <form id="contact-form" data-aos="zoom-in">
-                    <div class="form-grid staggered-item" >
-                        <div class="">
+                    <form id="contact-form" action="https://getform.io/f/ayvyqjjb" method="POST" data-aos="zoom-in">
+                        <div class="form-grid staggered-item">
+                            <div>
                             <label for="nombre">Nombre Completo *</label>
-                            <input class="input staggered-item" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                            <input class="input staggered-item" type="text" id="nombre" name="📛 Nombre completo" placeholder="Ingrese su nombre" required>
+                            </div>
+                            <div>
+                            <label for="email">Correo Electrónico *</label>
+                            <input class="input staggered-item" type="email" id="email" name="📧 Correo electrónico" placeholder="Ingrese su correo" required>
+                            </div>
+                            <div>
+                            <label for="telefono">Teléfono *</label>
+                            <input class="input staggered-item" type="tel" id="tel" name="📞 Teléfono" placeholder="Ingrese su teléfono" required>
+                            </div>
+                            <div>
+                            <label for="organizacion">Empresa/Organización</label>
+                            <input class="input staggered-item" type="text" id="organizacion" name="🏢 Organización" placeholder="Ingrese el nombre de su empresa">
+                            </div>
                         </div>
-                        <div class="">
-                            <label for="email">Correo Electronico *</label>
-                            <input class="input staggered-item" type="email" id="email" name="email" placeholder="ingrese su correo" required>
+
+                        <div>
+                            <label for="asunto">Asunto *</label>
+                            <input class="asunto staggered-item" type="text" id="asunto" name="📝 Asunto" placeholder="Escriba el asunto" required>
                         </div>
-                        <div class="">
-                            <label for="telefono">telefono *</label>
-                            <input class="input staggered-item" type="tel" id="tel" name="tel" placeholder="Ingrese su telefono" required >
+
+                        <div>
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea class="staggered-item ahi" id="mensaje" name="✉️ Mensaje" placeholder="Escriba su mensaje" required></textarea>
                         </div>
-                        <div class="">
-                            <label for="organizacion">Empresa/organizacion</label>
-                            <input class="input staggered-item" type="text" id="organizacion" name="organizacion" placeholder="Ingrese el nombre de su empresa" >
+
+                        <!-- Campos ocultos opcionales -->
+                        <input type="hidden" name="_redirect" value="">
+
+                        <div class="boton-one block">
+                            <button type="submit" class="btn-ones staggered-item" value="Enviar">Enviar Mensaje</button>
                         </div>
-                    </div>
-                    
-                    <div class="">
-                        <label for="asunto">Asunto *</label>
-                        <input class="asunto staggered-item" type="text" id="asunto" name="asunto"  placeholder="Escriba el asunto" required></input>
-                    </div>
-                    <div class="">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea class="staggered-item ahi" id="mensaje" type="text" name="mensaje" placeholder="Escriba su mensaje" required></textarea>
-                    </div>
-                    <div class="boton-one block">
-                        <button type="submit" class="btn-ones staggered-item" value="Enviar">Enviar Mensaje</button>
-                    </div>
                 </form>
+                <div id="mensaje-enviado" class="toast-exito">
+                ✅ ¡Mensaje enviado con éxito! Gracias por contactarnos, nos pondremos en contacto contigo lo antes posible.
+                </div>
             </div>
 
             <div class="info-contactoB" data-aos="zoom-in">
@@ -258,7 +265,16 @@
 
                     <section class="mapa-info-container" data-aos="zoom-in">
                         <div class="mapa">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.1234567890123!2d-77.12345678901234!3d-12.345678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1234567890abcdef%3A0x1234567890abcdef!2sSan%20Lorenzo%20de%20Quinti%2C%20Huarochir%C3%AD%2C%20Lima%2C%20Per%C3%BA!5e0!3m2!1ses-419!2sus!4v12345678901234" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.474171220305!2d-76.4286137!3d-12.1571666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d5f7ea81647d%3A0x29f51c21f71f96ec!2sSan%20Lorenzo%20de%20Quinti%2C%20Huarochir%C3%AD%2C%20Lima!5e0!3m2!1ses-419!2spe!4v1718313300000!5m2!1ses-419!2spe"
+                                width="100%"
+                                height="400"
+                                style="border:0; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+
                         </div>
 
                         <div class="info-cos-mapa">
@@ -281,7 +297,12 @@
                                 
                             </div>
                             <div class="co-btn">
-                                <button class="btn-one btn-mapa ">Abrir en Google Maps</button>
+                                <a 
+                                    class="btn-one btn-mapa" 
+                                      href="https://www.google.com/maps/place/San+Lorenzo+de+Quinti,+Huarochirí,+Lima/@-12.1571666,-76.4286137,17z"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >Abrir en Google Maps</a>
                             </div>
                         </div>
                     </section>
@@ -296,18 +317,19 @@
             <!-- Logo y descripción -->
             <div class="footer-col">
             <h3 class="footer-logo">Asociación Ganadera Asunción de Cachuy</h3>
-            <p>Comprometidos con la crianza responsable de ganado vacuno y el desarrollo económico de nuestras familias productoras.</p>
+            <p>La Asociación ganadera Asunción de Cachuy es una organización dedicada a la producción y comercialización de bovino en pie de alta calidad en la región de Lima.
+                Estamos ubicados en la localidad de Cachuy, Distrito de San Lorenzo de Quinti, Provincia de Huarochirí. </p>
             </div>
 
             <!-- Enlaces útiles -->
             <div class="footer-col">
             <h4>Enlaces</h4>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#productos">Ganado en venta</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="../">Inicio</a></li>
+                <li><a href="../nosotros/">Nosotros</a></li>
+                <li><a href="../ejemplares/">Catálogo</a></li>
+                <li><a href="../proyectos/">Proyectos</a></li>
+                <li><a href="./">Contacto</a></li>
             </ul>
             </div>
 
@@ -315,16 +337,16 @@
             <div class="footer-col">
             <h4>Contacto</h4>
             <ul>
-                <li><strong>📍 Dirección:</strong> Comunidad Campesina de Cachuy, Yauyos, Lima – Perú</li>
-                <li><strong>📞 Teléfono:</strong> +51 987 654 321</li>
-                <li><strong>✉️ Email:</strong> ganaderoscachuy@gmail.com</li>
+                <li><strong>📍 Dirección:</strong> San Lorenzo de Quinti, Huarochirí - Lima, Perú </li>
+                <li><strong>📞 Teléfono:</strong> +57 300 123 4567</li>
+                <li><strong>✉️ Email:</strong> ganaderiaasunciondecachuy@gmail.com </li>
                 <li><a href="https://wa.me/51987654321" target="_blank">💬 Escríbenos por WhatsApp</a></li>
             </ul>
             </div>
 
             <!-- Apoyo institucional -->
             <div class="footer-col">
-              <h4>Apoyan</h4>
+              <h4>Nuestros Aliados</h4>
               <ul>
                   <li>AgroRural</li>
                   <li>FIDA</li>
@@ -337,16 +359,16 @@
               <h4>Síguenos en redes</h4>
               <div class="social-links">
                 <a href="https://facebook.com" target="_blank" class="facebook" aria-label="Facebook">
-                  <img src="icons/facebook.svg" alt="Facebook">
+                  <img src="" alt="Facebook">
                 </a>
                 <a href="https://instagram.com" target="_blank" class="instagram" aria-label="Instagram">
-                  <img src="icons/instagram.svg" alt="Instagram">
+                  <img src="" alt="Instagram">
                 </a>
-                <a href="https://youtube.com" target="_blank" class="youtube" aria-label="YouTube">
-                  <img src="icons/youtube.svg" alt="YouTube">
+                <a href="https://tiktok.com" target="_blank" class="youtube" aria-label="YouTube">
+                  <img src="" alt="tiktok">
                 </a>
                 <a href="https://wa.me/51987654321" target="_blank" class="whatsapp" aria-label="WhatsApp">
-                  <img src="icons/whatsapp.svg" alt="WhatsApp">
+                  <img src="" alt="WhatsApp">
                 </a>
               </div>
             </div>
@@ -355,7 +377,6 @@
 
       
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../js/contacto.js"></script>
     <script src="../js/pulso.js"></script>
     <script src="../js/progress.js"></script>
@@ -363,39 +384,41 @@
     <script src="../js/menu.js"></script>
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-
-
-<!-- Incluir la librería clásica de EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Esperar a que la librería cargue
-  (function () {
-    emailjs.init("ixRgkFdyTdLAXwbGO"); // <-- tu clave pública real
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contact-form");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        emailjs.sendForm("service_zwd6l1s", "template_r13v36k", this)
-          .then(function () {
-            alert("✅ Mensaje enviado con éxito.");
-            form.reset();
-          }, function (error) {
-            console.error("❌ Error al enviar:", error);
-            alert("Hubo un problema al enviar tu mensaje.");
-          });
-      });
-    });
-  })();
-</script>
-
     <script>
       AOS.init({ duration: 500 });
     </script>
+<script>
+  const form = document.getElementById("contact-form");
+  const mensaje = document.getElementById("mensaje-enviado");
 
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        mensaje.classList.add("show");
+
+        // Ocultar después de 4 segundos
+        setTimeout(() => {
+          mensaje.classList.remove("show");
+        }, 5000);
+      } else {
+        alert("❌ Hubo un problema al enviar el formulario.");
+      }
+    })
+    .catch(() => {
+      alert("❌ Error al conectar con el servidor.");
+    });
+  });
+</script>
 
 </body>
 </html>

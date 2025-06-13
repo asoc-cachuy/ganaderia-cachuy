@@ -12,6 +12,30 @@
   --border-bottom: #928f8f98;
   --font-p: 'Underdog', Times, serif;
 }
+
+.toast-exito {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2a5c2a;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  font-size: 18px;
+  display: none;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+
+.toast-exito.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
 /*! imagen y su texto*/
 *{
   margin: 0;
