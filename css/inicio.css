@@ -43,7 +43,7 @@ h2{
 }
 .texto-contacto h1 {
   position: relative;
-  font-size: clamp(3rem, 6vw, 7rem);
+  font-size: clamp(3rem, 4.5vw, 6rem);
   color: var(--color-h3);
   font-family:'Cherry Bomb One', cursive;
   text-align: center;
