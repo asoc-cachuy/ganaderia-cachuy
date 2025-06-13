@@ -1,6 +1,6 @@
   :root {
   --titulo-span:  #2a5c2a;
-  --text-parrafo-general: rgba(14, 0, 0, 0.664);
+  --text-parrafo-general: rgb(0, 0, 0);
   --color-h3: #ffb703;
   --box-shadow-color:#2196f3;
   --border:#2196f3;
@@ -10,6 +10,7 @@
   --button-color-dark: #2c1825af;
   --text-color: #000000;
   --border-bottom: #928f8f98;
+  --font-p: 'Underdog', Times, serif;
 }
 /*! imagen y su texto*/
 *{
@@ -35,15 +36,13 @@ h2 span {
   height: 90vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.texto-contacto {
-  margin-top: 10rem;
-  justify-content: center;
-}
+
 .texto-contacto h1 {
   font-size: clamp(4rem, 6vw, 7rem);
   margin: 0 0 0 1rem;
-  color: var(--titulo-span);
+  color: var(--color-h3);
   font-family:'Cherry Bomb One', cursive;
 }
 
@@ -53,9 +52,17 @@ h2 span {
   animation: pulseBounceGlow 1.5s ease-in-out infinite;
   opacity: 0;
 }
+.p-principal{
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 30% 20% 60% 10%;
+}
 .texto-contacto p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: rgb(0, 0, 0);
+  font-family: var(--font-p)
 }
 @keyframes pulseBounceGlow {
   0% {
@@ -112,7 +119,6 @@ h2 span {
     margin: 1rem;
     color: var(--title-h2);
     padding-left: 1rem;
-    font-family: 'Underdog', cursive;
     font-weight: 900;
 }
 .textoB-contacto h2 span{
@@ -120,11 +126,13 @@ h2 span {
     font-family:'Cherry Bomb One', cursive;
 }
 .textoB-contacto p{
-    font-size: clamp(0.5rem, 3vw, 1.5rem);
+    font-size: clamp(0.5rem, 3vw, 1.2rem);
     margin: 1rem;
     margin-top: 3rem 0;
     color: var(--text-parrafo-general);
     text-align: center;
+    color: #000000;
+    font-family: var(--font-p);
 }
 /*! texto header de form */
 .textoC-contacto {
@@ -196,12 +204,15 @@ form textarea{
 }
 form .input::placeholder{
   color: var(--text-color);
+  font-family: var(--font-p);
 }
 form .asunto::placeholder{
   color: var(--text-color);
+  font-family: var(--font-p);
 }
-form textarea::placeholder{
+form .ahi::placeholder{
   color: var(--text-color);
+  font-family: var(--font-p);
 } 
 
 .boton-one{ 
@@ -209,7 +220,7 @@ form textarea::placeholder{
     color: var(--text-color);
 }
 .btn-ones{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--font-p);
   padding: 1rem 4rem;
   border-radius: 30px;
   background: linear-gradient(to right, #2196f3, #90e0ef);
@@ -242,6 +253,7 @@ form textarea::placeholder{
   margin-top: 3rem 0;
   color: var(--text-parrafo-general);
   text-align: center;
+  font-family: var(--font-p);
 }
 
 .container-dire{
@@ -260,6 +272,7 @@ form textarea::placeholder{
   font-size: clamp(0.4rem, 4vw, 1rem);
   margin: 0.3rem;
   color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
 
 /*! redes sociales */
@@ -274,6 +287,7 @@ form textarea::placeholder{
     margin: 0.5rem 0;
     font-weight: 100;
     text-align: center;
+    font-family: var(--font-p);
 }
 .redes{
     display: flex;
@@ -384,6 +398,7 @@ form textarea::placeholder{
   margin: 0.5rem 0;
   font-weight: 100;
   text-align: center;
+  font-family: var(--font-p);
 }
 
 
@@ -409,11 +424,12 @@ form textarea::placeholder{
   font-family: 'Cherry Bomb One', cursive;
 }
 .ubicacion-title p{
-   font-size: clamp(0.5rem, 4vw, 1.5rem);
+   font-size: clamp(0.5rem, 4vw, 1.2rem);
     color: var(--text-parrafo-general);
     margin: 1rem;
     margin-top: 2rem;
     text-align: center;
+    font-family: var(--font-p);
 }
 .mapa-info-container{
     display: grid;
@@ -453,6 +469,7 @@ form textarea::placeholder{
     font-size: clamp(0.5rem, 4vw, 1rem);
     color: var(--text-parrafo-general);
     margin: 0.3rem;
+    font-family: var(--font-p);
 }
 .info-cos-mapa .comop {
     font-size: clamp(0.5rem, 4vw, 1rem);
@@ -474,7 +491,7 @@ form textarea::placeholder{
 }
 .arrow {
     font-size: 24px;
-    color: #ffffff;
+    color: #000000;
     padding: 0 5px;
     transition: transform 0.3s ease;
 }
@@ -488,6 +505,7 @@ form textarea::placeholder{
   font-size: 1rem;
   font-weight: 900;
   cursor: pointer;
+  font-family: var(--font-p);
 }
 .co-btn{
   text-align: center;

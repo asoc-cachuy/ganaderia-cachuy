@@ -62,7 +62,7 @@
                 <h1 class="titulo-contacto ">
                     <span>C</span><span>O</span><span>N</span><span>T</span><span>Á</span><span>C</span><span>T</span><span>A</span><span>N</span><span>O</span><span>S</span>
                 </h1>
-                <div>
+                <div class="p-principal">
                     <p>
                         Estamos aqui para responder tus preguntas y brindarte
                         la información que necesitas
@@ -89,36 +89,36 @@
                     <h3 class="">Formulario de Contacto</h3>
                 </div>
 
-                <form action="">
-                    <div class="form-grid staggered-item" data-aos="zoom-in">
+                <form id="contact-form" data-aos="zoom-in">
+                    <div class="form-grid staggered-item" >
                         <div class="">
                             <label for="nombre">Nombre Completo *</label>
-                            <input class="input staggered-item" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" >
+                            <input class="input staggered-item" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                         </div>
                         <div class="">
                             <label for="email">Correo Electronico *</label>
-                            <input class="input staggered-item" type="email" id="email" name="email" placeholder="ingrese su correo">
+                            <input class="input staggered-item" type="email" id="email" name="email" placeholder="ingrese su correo" required>
                         </div>
                         <div class="">
                             <label for="telefono">telefono *</label>
-                            <input class="input staggered-item" type="tel" id="tel" name="tel" placeholder="Ingrese su telefono" >
+                            <input class="input staggered-item" type="tel" id="tel" name="tel" placeholder="Ingrese su telefono" required >
                         </div>
                         <div class="">
                             <label for="organizacion">Empresa/organizacion</label>
-                        <input class="input staggered-item" type="organizacion" id="organizacion" name="organizacion" placeholder="Ingrese el nombre de su empresa" >
+                            <input class="input staggered-item" type="text" id="organizacion" name="organizacion" placeholder="Ingrese el nombre de su empresa" >
                         </div>
                     </div>
                     
-                    <div class="" data-aos="zoom-in">
+                    <div class="">
                         <label for="asunto">Asunto *</label>
-                        <input class="asunto staggered-item" id="asunto" name="asunto"  placeholder="Escriba el asunto"></input>
+                        <input class="asunto staggered-item" type="text" id="asunto" name="asunto"  placeholder="Escriba el asunto" required></input>
                     </div>
                     <div class="">
                         <label for="mensaje">Mensaje *</label>
-                        <textarea class="staggered-item" id="mensaje" name="mensaje" placeholder="Escriba su mensaje"></textarea>
-                    </div data-aos="zoom-in">
+                        <textarea class="staggered-item ahi" id="mensaje" type="text" name="mensaje" placeholder="Escriba su mensaje" required></textarea>
+                    </div>
                     <div class="boton-one block">
-                        <button class="btn-ones staggered-item" value="Enviar">Enviar Mensaje</button>
+                        <button type="submit" class="btn-ones staggered-item" value="Enviar">Enviar Mensaje</button>
                     </div>
                 </form>
             </div>
@@ -363,8 +363,39 @@
     <script src="../js/menu.js"></script>
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+
+<!-- Incluir la librería clásica de EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Esperar a que la librería cargue
+  (function () {
+    emailjs.init("ixRgkFdyTdLAXwbGO"); // <-- tu clave pública real
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm("service_zwd6l1s", "template_r13v36k", this)
+          .then(function () {
+            alert("✅ Mensaje enviado con éxito.");
+            form.reset();
+          }, function (error) {
+            console.error("❌ Error al enviar:", error);
+            alert("Hubo un problema al enviar tu mensaje.");
+          });
+      });
+    });
+  })();
+</script>
+
     <script>
       AOS.init({ duration: 500 });
     </script>
+
+
 </body>
 </html>

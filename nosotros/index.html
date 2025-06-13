@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
 
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- SwiperJS CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -64,13 +64,14 @@
                 <h1 class="titulo-contacto ">
                     <span>C</span><span>O</span><span>N</span><span>Ó</span><span>C</span><span>E</span><span>N</span><span>O</span><span>S</span>
                 </h1>
-                <p>
-                    Conoce a la Asociación de Ganaderos Asunción de Cachuy, 
-                    una organización ganadera comprometida con la calidad.
-                </p>
+                <div class="p-principal">
+                    <p>
+                        Somos una organización ganadera comprometida con la calidad.
+                    </p>
+                </div>
+
             </div>
         </section>
-
 
 
     <div class="nosotros">
@@ -112,9 +113,7 @@
                 <div class="container">
                     <div class="text-content espera" data-aos="zoom-in">
                         <h3>Misión</h3>
-                        <p>
-                            Mejorar la calidad de vida de nuestros asociados mediante una ganadería sostenible, rentable y responsable, promoviendo animales de alta calidad y una comercialización justa.
-                        </p>
+                        <p>Mejorar la calidad de vida de nuestros asociados mediante una ganadería sostenible, rentable y responsable, promoviendo animales de alta calidad y una comercialización justa.</p>
                     </div>
                     <div class="imagen-mision" data-aos="zoom-in">
                         <img class="img-mision" src="../images/vision.jpg" alt="">
@@ -141,9 +140,12 @@
                 <div class="containerr">
                     <div class="text-contente" data-aos="zoom-in">
                         <h3>Valores</h3>
-                        <p>
+                        <div>
+                           <p class="p-concep">
                             Nuestros valores reflejan el compromiso con una ganadería responsable, sostenible y orientada al bienestar de nuestros asociados:
-                        </p>
+                            </p> 
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -278,25 +280,32 @@
                 <h2> <span>Impulsamos</span>  <span>la ganadería</span></h2>
                 <p>Uniendo tradición, tecnología y sostenibilidad para un futuro mejor para nuestros productores y sus familias.</p>
             </div>
-            <section class="carde">
-                <div class="berde" data-aos="zoom-in">
-                    <h3 class="e-verdee">Impulsamos la ganadería local</h3>
-                    <p>15 familias ganaderas unidas por una producción responsable y organizada, con animales de calidad para el mercado regional.</p>
+            <section class="timeline">
+                <div class="timeline-item left" data-aos="zoom-in">
+                    <div class="content">
+                        <h3>Impulsamos la ganadería local</h3>
+                        <p>15 familias ganaderas unidas por una producción responsable y organizada, con animales de calidad para el mercado regional.</p>
+                    </div>
                 </div>
-                <div class="berde" data-aos="zoom-in">
-                    <h3 class="e-verdee">Plan de negocios en marcha</h3>
-                    <p>Ejecutamos un plan financiado por Avanzar Rural para mejorar nuestra ganadería con infraestructura, técnica y capacitación.</p>
+                <div class="timeline-item right" data-aos="zoom-in">
+                    <div class="content">
+                        <h3>Plan de negocios en marcha</h3>
+                        <p>Ejecutamos un plan financiado por Avanzar Rural para mejorar nuestra ganadería con infraestructura, técnica y capacitación.</p>
+                    </div>
                 </div>
-                <div class="berde" data-aos="zoom-in">
-                    <h3 class="e-verdee">Creciendo con inversión y técnica</h3>
-                    <p>Con apoyo institucional, mejoramos corrales, pasturas y manejo del ganado, aplicando conocimientos prácticos.</p>
+                <div class="timeline-item left" data-aos="zoom-in">
+                    <div class="content">
+                        <h3>Creciendo con inversión y técnica</h3>
+                        <p>Con apoyo institucional, mejoramos corrales, pasturas y manejo del ganado, aplicando conocimientos prácticos.</p>
+                    </div>
                 </div>
-                <div class="berde" data-aos="zoom-in">
-                    <h3 class="e-verdee">Miramos hacia un futuro sostenible</h3>
-                    <p>Nuestra meta es consolidar una ganadería rentable, organizada y sostenible, que beneficie a las familias ganaderas y cuide los recursos del territorio rural en el que vivimos y producimos.</p>
+                <div class="timeline-item right" data-aos="zoom-in">
+                    <div class="content">
+                        <h3>Miramos hacia un futuro sostenible</h3>
+                        <p>Nuestra meta es consolidar una ganadería rentable, organizada y sostenible, que beneficie a las familias ganaderas y cuide los recursos del territorio rural en el que vivimos y producimos.</p>
+                    </div>
                 </div>
             </section>
-
         </section>
     </section>
 
@@ -373,7 +382,7 @@
     <script src="../js/swipe.js"></script>
     <script src="../js/three-scroll.js"></script>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 500 });
     </script>

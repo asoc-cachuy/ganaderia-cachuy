@@ -1,12 +1,13 @@
 :root {
 
   --titulo-span:  #2a5c2a;
-  --text-parrafo-general: rgba(14, 0, 0, 0.664);
+  --text-parrafo-general: rgb(0, 0, 0);
   --color-h3: #ffb703;
   --box-shadow-color:#2196f3;
   --border:#2196f3;
   --title-h2: rgb(0, 0, 0);
-
+  --font-p: 'Underdog', Times, serif;
+  --font-h3: 'Lobster', cursive;
 
   --bg-color: #ffffff;
   --bg-color-dark: #43283a;
@@ -39,14 +40,11 @@ h2{
   height: 90vh;
   display: flex;
   justify-content: center;
-}
-.texto-contacto {
-  position: relative;
-  margin-top: 20vh;
+  align-items: center;
 }
 .texto-contacto h1 {
   position: relative;
-  font-size: clamp(4rem, 6vw, 8rem);
+  font-size: clamp(3rem, 6vw, 7rem);
   color: var(--color-h3);
   font-family:'Cherry Bomb One', cursive;
   text-align: center;
@@ -60,9 +58,18 @@ h2{
   opacity: 0;
 }
 .texto-contacto p {
-  font-size: clamp(1.3rem, 2vw, 1.5rem);
-  color: white;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
+.p-principal{
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 30% 20% 60% 10%;
+}
+
 @keyframes pulseBounceGlow {
   0% {
     transform: scale(1);
@@ -137,13 +144,13 @@ h2{
   font-size: 2rem;
   font-weight: bold;
   color: var(--color-h3);
-  font-family: 'Cherry Bomb One', cursive ; 
+  font-family: var(--font-h3); 
 }
 .noso p{
   font-size: 1.2rem;
   color: var(--text-parrafo-general);
-  font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-family: var(--font-p);
 }
 .grid-wrapper {
   position: relative;
@@ -171,9 +178,12 @@ h2{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 70px;
+  border-bottom-left-radius: 50px;
   border: 4px solid white;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -192,6 +202,7 @@ h2{
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
+  font-family: var(--font-p);
 }
 
 /* Responsive */
@@ -224,12 +235,12 @@ h2{
   font-family:'Cherry Bomb One', cursive;
 }
 .inicio-contenido p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 400;
   padding: 1rem 0;
   margin: 1rem;
   color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
 /*! contenido general de index */
 .inicio-garantia {
@@ -260,7 +271,7 @@ h2{
 
 .garantia-item {
   border: 2px solid;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -279,7 +290,7 @@ h2{
 }
 
 .icono {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 
@@ -293,6 +304,7 @@ h2{
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
+  font-family: var(--font-p);
 }
 
 
@@ -328,13 +340,13 @@ h2{
 .garantia-h3{
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-h3);
+  color: var(--font-h3);
   font-family: 'Cherry Bomb One', cursive ; 
 }
 .garantia-p{
   font-size:1.2rem;
   color: var(--text-parrafo-general);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-p);
 }
 
 
@@ -428,10 +440,11 @@ h2{
 }
 
 .descripcion {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   padding: 1rem 0;
   margin: 1rem;
   color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
 
 .boton-contenedor {
@@ -545,10 +558,10 @@ h2{
   color: var(--titulo-span);
 }
 .cabecera-testimonios p{
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   padding: 1rem 0;
   color: var(--text-parrafo-general);
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-p);
   font-weight: 400;
   text-align: center;
 }
@@ -571,7 +584,7 @@ h2{
 .testimonios-wrapper {
   max-width: 600px;
   width: 100%;
-  height: 350px;
+  height: 400px;
   color: #011220b6;
   font-family: 'Cherry Bomb One', sans-serif;
   position: relative;
@@ -594,7 +607,7 @@ h2{
 
 .comentario {
   font-size: 2rem;
-  line-height: 1.7;
+  line-height: 1.5;
   position: relative;
   margin-bottom: 1rem;
 }
@@ -606,8 +619,6 @@ h2{
   top: -30px;
   left: -30px;
   color: #3a0e8b;
-  
-
 }
 
 .autor {
@@ -616,7 +627,7 @@ h2{
   color: var(--color-h3);
   margin-top: 1rem;
   line-height: 1.4;
-  font-family: 'Dancing Script', cursive; 
+  font-family: var(--font-p);
 }
 
 .autor span {
@@ -658,11 +669,13 @@ h2{
   gap: 2rem;
   animation: scrollCarrusel 40s linear infinite;
 }
-
-.carrusel-track img {
-  width: 200px;
-  height: auto;
-  flex-shrink: 0;
+.testimonio img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 @keyframes scrollCarrusel {
@@ -698,18 +711,17 @@ h2{
   color: var(--titulo-span);
 }
 .proyectos-titulo p{
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   padding: 0;
   color: var(--text-parrafo-general);
-  font-family: 'Nunito', sans-serif;
   font-weight: 400;
+  font-family: var(--font-p);
 }
 
 .grid-proyectos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-  padding: 2rem 0;
 }
 
 .card-proyecto {
@@ -718,18 +730,14 @@ h2{
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-top: 2rem;
 }
 .card-man{
-  border: 2px solid #a3a6a8;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .card-mej{
-  border: 2px solid #a3a6a8;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .card-res{
-  border: 2px solid #a3a6a8;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .card-res::after{
@@ -738,8 +746,8 @@ h2{
   top: -0.9rem;
   left: 50%;
   transform: translateX(-50%);
-  background: #0057D8;
-  color: white;
+  background: #ffffff;
+  color: var(--bg-color-dark);
   padding: 0.5rem 2rem;
   border-radius: 8px;
   font-size: 1rem;
@@ -747,6 +755,7 @@ h2{
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   white-space: nowrap;
   z-index: 1;
+  font-family: 'Cherry Bomb One', cursive;
 }
 .card-mej::after{
   content: "Construccion de Cobertizos y corrales"; /* Tu título */
@@ -754,8 +763,8 @@ h2{
   top: -0.9rem;
   left: 50%;
   transform: translateX(-50%);
-  background: #0057D8;
-  color: white;
+  background: #ffffff;
+  color: var(--bg-color-dark);
   padding: 0.5rem 2rem;
   border-radius: 8px;
   font-size: 1rem;
@@ -763,6 +772,7 @@ h2{
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   white-space: nowrap;
   z-index: 1;
+  font-family: 'Cherry Bomb One', cursive;
 }
 .card-man::after{
   content: "Manejo y Mejoramiento de Pastisales"; /* Tu título */
@@ -770,8 +780,8 @@ h2{
   top: -0.9rem;
   left: 50%;
   transform: translateX(-50%);
-  background: #0057D8;
-  color: white;
+  background: #ffffff;
+  color: var(--bg-color-dark);
   padding: 0.5rem 2rem;
   border-radius: 8px;
   font-size: 1rem;
@@ -779,6 +789,7 @@ h2{
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   white-space: nowrap;
   z-index: 1;
+  font-family: 'Cherry Bomb One', cursive;
 }
 /*! h3 */
 .man{
@@ -811,7 +822,9 @@ h2{
 .card-proyecto p {
   font-size:1.2rem;
   color: var(--text-parrafo-general);
-  font-weight: 900;
+  font-weight: 100;
+  font-family: var(--font-p);
+  text-align: center;
 }
 .btn-transparente{
   background: linear-gradient(to right, #2196f3, #90e0ef);
@@ -839,18 +852,13 @@ h2{
   color: var(--titulo-span);
 }
 .contenido-alianzas p{
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   padding: 0;
   color: var(--text-parrafo-general);
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-p);
   font-weight: 400;
 }
 
-.alianzas-textos {
-  max-width: 1400px;
-  margin: 2rem auto 4rem;
-  color: var(--text-parrafo-general);
-}
 
 .card-alianza {
   border-radius: 20px;
@@ -871,6 +879,59 @@ h2{
   line-height: 1.4;
   color: var(--text-parrafo-general);
 }
+
+
+.logo-wall {
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  padding: 40px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-fast .marquee-inner { animation-duration: 15s; }
+.marquee-slow .marquee-inner { animation-duration: 30s; }
+.marquee-medium .marquee-inner { animation-duration: 22s; }
+.marquee-reverse .marquee-inner { animation-name: scroll-right; }
+
+.logo-track {
+  display: flex;
+}
+
+.logo-track img {
+  height: 150px;
+  margin: 0 40px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-track img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
 
 
 /*! responsividad */
@@ -1061,6 +1122,11 @@ h2{
   }
   .alianzas-textos{
     grid-template-columns: 1fr;
+  }
+  .logo-track img {
+    width: auto;
+    height: 80px;
+    max-width: 100%;
   }
 }
 

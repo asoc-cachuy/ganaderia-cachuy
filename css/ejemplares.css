@@ -1,10 +1,20 @@
 :root {
+
   --titulo-span:  #2a5c2a;
-  --text-parrafo-general: rgba(14, 0, 0, 0.664);
+  --text-parrafo-general: rgb(0, 0, 0);
   --color-h3: #ffb703;
   --box-shadow-color:#2196f3;
   --border:#2196f3;
   --title-h2: rgb(0, 0, 0);
+  --font-p: 'Underdog', Times, serif;
+  --font-h3: 'Lobster', cursive;
+
+  --bg-color: #ffffff;
+  --bg-color-dark: #43283a;
+  --button-color-dark: #2c1825af;
+  --text-color: #000000;
+  --text-parrafos: rgb(39, 39, 39);
+  --border-bottom: #928f8f98;
 }
 h2{
   text-transform: uppercase;
@@ -26,20 +36,20 @@ h2{
   background-position: center;
   height: 90vh;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  display: flex;
+  display: flex; 
+  align-items: center;
 }
-.texto-contacto {
-
+.texto-contacto { 
   text-align: center;
   margin: 0 auto;
-   margin-top: 20vh;
 }
 .texto-contacto h1 {
-  font-size: clamp(2rem, 8vw, 10rem);
+  font-size: clamp(2rem, 8vw, 7rem);
   margin: 0 0 0 5rem;
   color: var(--color-h3);
   font-family:'Cherry Bomb One', cursive;
   text-align: center;
+
 }
 
 .titulo-contacto span {
@@ -48,12 +58,18 @@ h2{
   opacity: 0;
 }
 .texto-contacto p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  margin: 0 0 0 5rem;
-  color: white;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-parrafo-general);
+  text-align: center;
+  font-family: var(--font-p);
+
+}
+.p-principal{
   max-width: 300px;
   margin: 0 auto;
-  text-align: center
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 30% 20% 60% 10%;
 }
 @keyframes pulseBounceGlow {
   0% {
@@ -114,10 +130,9 @@ h2{
   color: var(--titulo-span);
 }
 .contenido-ganado p {
-  color: #444;
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1rem;
+  color: var(--text-parrafo-general);
+  font-size: 1.2rem;
+  font-family: var(--font-p);
 }
 
 .grid-ganado {
@@ -129,9 +144,8 @@ h2{
 }
 
 .card-ganado {
-  background: white;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: transform 0.3s ease;
   display: flex;

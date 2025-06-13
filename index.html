@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="./css/inicio.css">
     <link rel="stylesheet" href="./css/footer.css">
 
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- tree.js -->
      <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -72,7 +73,7 @@
     <main>
         <section class="seccion-contacto">
             <div class="texto-contacto">
-                <p>Excelencia, genética y futuro en bovinos</p>
+                
                 <h1 class="titulo-contacto">
                     <span>e</span><span>s</span><span>t</span><span>a</span><span>n</span><span>c</span><span>i</span><span>a</span>
                     <br>
@@ -80,9 +81,10 @@
                     <br>
                     <span>c</span><span>o</span><span>r</span><span>a</span><span>j</span><span>o</span><span>s</span><span>a</span>
                 </h1>
-                <p>
-                  Cuidado responsable y venta a pie de ganado vacuno
-                </p>
+                <div class="p-principal">
+                  <p>Excelencia, genética y futuro en bovinos</p>
+                </div>
+                
             </div>
         </section>
     </main>
@@ -145,7 +147,7 @@
                   <div class="swiper-slide garantia-item gra-cele gradient-orange" style="--i:1">
                     <div class="icono">🤝</div>
                     <h3 class="garantia-h3">Experiencia y Confianza</h3>
-                    <p class="garantia-p">Animales fuertes, bien manejados y provenientes de sistemas responsables. Ofrecemos ejemplares seleccionados y comercialización directa desde el campo.</p>
+                    <p class="garantia-p">Contamos con amplia trayectoria en la ganadería bovina, garantizando animales sanos. La confianza de nuestros clientes nace del trabajo responsable.</p>
                     <button class="btn expe" onclick="abrirModal('experiencia')">Conócenos</button>
                   </div>
                   <div class="swiper-slide garantia-item gra-cele gradient-purple" style="--i:2">
@@ -235,6 +237,7 @@
                                 <p class="autor">
                                   《 Pedro R 》<br />
                                 </p>
+                                <img src="./images/rodri.jpg" alt="">
                             </div>
 
                             <div class="testimonio">
@@ -244,6 +247,7 @@
                                 <p class="autor">
                                 《 Analí T 》<br />
                                 </p>
+                                <img src="./images/ana.jpg" alt="">
                             </div>
 
                             <div class="testimonio">
@@ -253,6 +257,7 @@
                                 <p class="autor">
                                 《 Carlos M 》<br />
                                 </p>
+                                <img src="./images/pedro.jpeg" alt="">
                             </div>
                             <div class="testimonio">
                                 <p class="comentario">
@@ -260,6 +265,7 @@
                                 <p class="autor">
                                 《 Freddy T 》<br />
                                 </p>
+                                <img src="./images/fredy.jpg" alt="">
                             </div>
                             <div class="testimonio">
                                 <p class="comentario">
@@ -267,6 +273,7 @@
                                 <p class="autor">
                                 《 Flor M 》<br />
                                 </p>
+                                <img src="./images/mujer.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -320,21 +327,27 @@
             desarrollar una ganadería sostenible, competitiva e inclusiva en el Perú.
           </p>
             <div class="carrusel-infinito" data-aos="zoom-in">
-              <div class="carrusel-track">
-                <!-- logos duplicados -->
-                <img src="./images/fida.jpg" alt="FIDA" />
-                <img src="./images/ministerio.jpg" alt="Ministerio" />
-                <img src="./images/agrorural.png" alt="AgroRural" />
-                <img src="./images/avanzar.jpg" alt="Avanzar" />
-                <img src="./images/familiar.jpeg" alt="Toro 5" />
 
-                <!-- duplicados para efecto loop -->
-                <img src="./images/fida.jpg" alt="FIDA" />
-                <img src="./images/ministerio.jpg" alt="Ministerio" />
-                <img src="./images/agrorural.png" alt="AgroRural" />
-                <img src="./images/avanzar.jpg" alt="Avanzar" />
-                <img src="./images/familiar.jpeg" alt="Toro 5" />
-              </div>
+              <section class="logo-wall">
+                <div class="marquee marquee-fast">
+                  <div class="marquee-inner">
+                    <div class="logo-track">
+                      <img src="./images/fida.jpg" alt="logo1" />
+                      <img src="./images/ministerio.jpg" alt="logo2" />
+                      <img src="./images/agrorural.png" alt="logo3" />
+                      <img src="./images/avanzar.jpg" alt="logo4" />
+                      <img src="./images/familiar.jpeg" alt="logo5" />
+                      <!-- Duplica para animación continua -->
+                      <img src="./images/fida.jpg" alt="logo1" />
+                      <img src="./images/ministerio.jpg" alt="logo2" />
+                      <img src="./images/agrorural.png" alt="logo3" />
+                      <img src="./images/avanzar.jpg" alt="logo4" />
+                      <img src="./images/familiar.jpeg" alt="logo5" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </div>
         </div>
 

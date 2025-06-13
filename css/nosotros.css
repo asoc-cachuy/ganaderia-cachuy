@@ -1,11 +1,13 @@
 :root {
 
   --titulo-span:  #2a5c2a;
-  --text-parrafo-general: rgba(14, 0, 0, 0.664);
+  --text-parrafo-general: rgb(0, 0, 0);
   --color-h3: #ffb703;
   --box-shadow-color:#2196f3;
   --border:#2196f3;
   --title-h2: rgb(0, 0, 0);
+  --font-p: 'Underdog', Times, serif;
+  --font-h3: 'Lobster', cursive;
 
   --bg-color: #ffffff;
   --bg-color-dark: #43283a;
@@ -39,16 +41,20 @@ h2{
   height: 90vh;
   display: flex;
   justify-content: center;
-  text-align: center;
-}
-.texto-contacto {
-  margin-top: 20vh;
+  align-items: center;
 }
 .texto-contacto h1 {
   font-size: clamp(4rem, 6vw, 7rem);
-  color: var(--titulo-span);
+  color: var(--color-h3);
   margin: 1rem;
   font-family:'Cherry Bomb One', cursive;
+}
+.p-principal{
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 30% 20% 60% 10%;
 }
 
 .titulo-contacto span {
@@ -58,9 +64,10 @@ h2{
   opacity: 0;
 }
 .texto-contacto p {
-  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-size: clamp(1.3rem, 2vw, 1.2rem);
   margin: 1rem;
-  color: white;
+  color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
 @keyframes pulseBounceGlow {
   0% {
@@ -128,15 +135,16 @@ h2{
   text-align: center;
 }
 .noso h3{
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--color-h3);
-  font-family: 'Cherry Bomb One', cursive ; 
+  font-family: var(--font-h3) ; 
 }
 .noso p{
   font-size: 1.2rem;
   color: var(--text-parrafo-general);
   font-weight: 500;
+  font-family: var(--font-p);
 }
 .grid-wrapper {
   position: relative;
@@ -188,6 +196,7 @@ h2{
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
+  font-family: var(--font-p);
 }
 
 /* Responsive */
@@ -215,7 +224,7 @@ h2{
   padding-left: 1rem;
   font-family: 'Underdog', cursive;
   text-align: center;
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .section-2 h2 span{
   color: var(--titulo-span);
@@ -293,6 +302,7 @@ h2{
   font-weight: bold;
   color: var(--color-h3);
   text-align: center;
+  font-family:var(--font-h3);
 }
 
 .text-content p {
@@ -300,6 +310,7 @@ h2{
   color: var(--text-parrafo-general);
   text-align: center;
   padding: 1rem 0.5rem;
+  font-family: var(--font-p);
 }
 
 /* Imagen inferior */
@@ -334,12 +345,14 @@ h2{
   transform: translateY(0); /* Sube y cubre el card */
 }
 .ope:hover h3{
-  color: var(--color-h3); /* O el color que quieras cuando se tape */
+  color: var(--color-h3);
+  font-family: var(--font-h3); /* O el color que quieras cuando se tape */
 }
 
 .ope h3 {
   font-size: clamp(1.3rem, 2vw, 1.8rem);
   color: var(--color-h3);
+
 }
 .ope p{
   font-size: clamp(1rem, 2vw, 1.2rem);
@@ -394,16 +407,18 @@ h2{
 }
 
 .text-contente h3 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   font-weight: bold;
   color: var(--color-h3);
   text-align: center;
+  font-family: var(--font-h3);
 }
 .text-contente p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-parrafo-general);
   text-align: center;
   padding: 0.5rem 0;
+  font-family: var(--font-p);
 }
 /*! valores */
 
@@ -511,33 +526,34 @@ h2{
 }
 
 .valor-h3.green {
-color: var(--color-h3);
+  color: var(--bg-color-dark);
 }
 
 .valor-h3.orange {
-color: var(--color-h3);
+  color: var(--bg-color-dark);
 }
 
 .valor-h3.purple {
-color: var(--color-h3);
+  color: var(--bg-color-dark);
 }
 
 .valor-h3.blue {
-color: var(--color-h3);
+  color: var(--bg-color-dark);
 }
 
 .valor-h3.pink {
-color: var(--color-h3);
+  color: var(--bg-color-dark);
 }
 
 .valor-h3.mora {
-color: var(--color-h3);
+  color: var(--bg-color-dark);
 }
 
 .valor-p {
   font-size: 1.1rem;
   color: var(--text-parrafo-general);
   font-weight: 500;
+  font-family: var(--font-p);
 }
 
 .valores-pagination {
@@ -606,8 +622,9 @@ color: var(--color-h3);
 .modelo-negocio .mdn{
   text-align: center;
   padding: 1.5rem;
-  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  font-size: clamp(0.5rem, 4vw, 1.2rem);
   color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
 
 /*producacion */
@@ -690,6 +707,7 @@ color: var(--color-h3);
 .produccion-item p {
   font-size: 1.2rem;
   color: var(--text-parrafo-general);
+  font-family: var(--font-p);
 }
 
 /* Degradados personalizados por tarjeta */
@@ -770,7 +788,7 @@ color: var(--color-h3);
   transform: translateY(0); /* Sube y cubre el card */
 }
 .estadisticas-div:hover h3{
-  color: var(--color-h3); /* O el color que quieras cuando se tape */
+  color: var(--bg-color-dark); /* O el color que quieras cuando se tape */
 }
 
 
@@ -789,35 +807,35 @@ color: var(--color-h3);
 
 
 .verde{
-  box-shadow: #2196f3 0px 0px 12px 0px;
+  box-shadow: inset #2196f3 0px 0px 12px 0px;
 }
 .naranja{
-  box-shadow: #2196f3 0px 0px 12px 0px;
+  box-shadow:inset #2196f3 0px 0px 12px 0px;
 }
 .violeta{
-  box-shadow: #2196f3 0px 0px 12px 0px;
+  box-shadow: inset #2196f3 0px 0px 12px 0px;
 }
 .moras{
-  box-shadow: #2196f3 0px 0px 12px 0px;
+  box-shadow: inset #2196f3 0px 0px 12px 0px;
 }
 
 .e-verde{
-  color: var(--color-h3);
+  color: var(--bg-color-dark);
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;
 }
 .e-naranja{
-  color: var(--color-h3);
+  color: var(--bg-color-dark);
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;
 }
 .e-violeta{
-  color: var(--color-h3);
+  color: var(--bg-color-dark);
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;
 }
 .e-moras{
-  color: var(--color-h3);
+  color: var(--bg-color-dark);
   font-family:'Cherry Bomb One', cursive;
   font-size: 2rem;  
 }
@@ -830,13 +848,16 @@ color: var(--color-h3);
 
 .titulo-con-fondo {
   font-size: clamp(1rem, 12vw, 15rem);
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 3rem;
   background: url('../images/conocenos.jpg') center/cover no-repeat;
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
   text-transform: uppercase;
+}
+.estadisticas div p {
+  font-family: var(--font-p);
 }
 
 
@@ -846,72 +867,119 @@ color: var(--color-h3);
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
-    color: var(--text-color);
-
 }
 .container-impulsamos{
-    color: var(--text-color);
-    margin: 3rem 0;
-    max-width: 1400px;
-    margin: 0 auto;
-    margin-top: 3rem;
+  margin: 3rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 3rem;
 }
 
 .impulsamos-texto h2{
-    font-size: clamp(2rem, 4vw, 4rem);
-    padding: 0.5rem;
-    margin: 0;
-    color: var(--title-h2);
-    font-family: 'Underdog', cursive;
-    text-align: center;
+  font-size: clamp(2rem, 4vw, 4rem);
+  padding: 0.5rem;
+  margin: 0;
+  color: var(--title-h2);
+  font-family: 'Underdog', cursive;
+  text-align: center;
 }
 .impulsamos-texto h2 span{
-    color: var(--titulo-span);
-    font-family:'Cherry Bomb One', cursive;
+  color: var(--titulo-span);
+  font-family:'Cherry Bomb One', cursive;
 }
 .impulsamos-texto p{
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    margin-bottom: 1rem;
-    color: var(--text-parrafo-general);
-    padding: 1rem;
-    text-align: center;
-}
-.carde{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
-}
-@media screen and (max-width: 940px) {
-  .carde{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 400px) {
-  .carde{
-    grid-template-columns: 1fr;
-  }
-}
-.berde{
-  border: 2px solid #a3a6a8;
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
-.e-verdee{
-  font-size: clamp(1rem, 2vw, 2rem);
-  color: var(--color-h3);
-  font-family:'Cherry Bomb One', cursive;
-  text-align: center;
-}
-.carde p {
-  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1rem;
   color: var(--text-parrafo-general);
+  padding: 1rem;
   text-align: center;
-  font-weight: 500;
-  margin: 0;
-  padding: 0.5rem;
+  font-family: var(--font-p);
 }
+.timeline {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #2196f3;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  background-color: transparent;
+}
+
+.timeline-item .content {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item.left .content {
+  margin-right: 30px;
+}
+
+.timeline-item.right .content {
+    margin-left: 30px;
+}
+.content h3{
+  color: var(--bg-color-dark);
+  font-family:'Cherry Bomb One', cursive;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+.content p{
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1rem;
+  color: var(--text-parrafo-general);
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-p)
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 8px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 15px;
+    }
+
+    .timeline-item.right,
+    .timeline-item.left {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item.left .content,
+    .timeline-item.right .content {
+        margin: 0 0 20px 20px;
+    }
+}
+
+
 /* Móvil: 1 nombre visible a la vez */
 
 
