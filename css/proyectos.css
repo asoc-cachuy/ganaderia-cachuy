@@ -45,8 +45,7 @@ h2{
   margin-top: 20vh;
 }
 .texto-contacto h1 {
-  font-size: clamp(4rem, 6vw, 7rem);
-  margin: 0 0 0 5rem;
+  font-size: clamp(2rem, 6vw, 7rem);
   color: var(--color-h3);
   font-family:'Cherry Bomb One', cursive;
 }
@@ -58,7 +57,7 @@ h2{
   opacity: 0;
 }
 .texto-contacto p {
-  font-size: clamp(1.3rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-parrafo-general);
   font-family: var(--font-p);
 }

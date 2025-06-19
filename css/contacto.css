@@ -50,7 +50,7 @@ h2 span {
 .seccion-contacto {
   position: relative;
   background-image: linear-gradient(rgba(9, 6, 221, 0.4), rgba(7, 22, 236, 0.4)),
-  url('../images/contacto-perfil.jpg');
+  url('../images/contacto-perfil.jpg') ;
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -59,6 +59,7 @@ h2 span {
   justify-content: center;
   align-items: center;
 }
+
 
 .texto-contacto h1 {
   font-size: clamp(4rem, 6vw, 7rem);
